@@ -1,5 +1,6 @@
 // Created by Isaac Halvorson on 8/6/18
 
+import BandcamperKit
 import Cocoa
 
 class ViewController: NSViewController {
@@ -7,7 +8,14 @@ class ViewController: NSViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		// Do any additional setup after loading the view.
+		let bandcampService = BandcampService()
+		bandcampService.getArtist(callback)
+	}
+
+	let callback: (Data?) -> Void = { data in
+		guard let data = data else { return }
+		let dataString = String(data: data, encoding: .utf8)
+		print("\(dataString ?? "no data")")
 	}
 
 	override var representedObject: Any? {
@@ -16,6 +24,8 @@ class ViewController: NSViewController {
 		}
 	}
 
+	@IBAction func didClickButton(_ sender: Any) {
+		NSSound.beep()
+	}
 
 }
-

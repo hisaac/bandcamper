@@ -11,7 +11,35 @@
 		4A6BD5B621187B0800D35FC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B521187B0800D35FC2 /* ViewController.swift */; };
 		4A6BD5B821187B0800D35FC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B721187B0800D35FC2 /* Assets.xcassets */; };
 		4A6BD5BB21187B0800D35FC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B921187B0800D35FC2 /* Main.storyboard */; };
+		4A6BD5CC21187BBB00D35FC2 /* BandcamperKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A6BD5CA21187BBB00D35FC2 /* BandcamperKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A6BD5CF21187BBB00D35FC2 /* BandcamperKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BD5C821187BBB00D35FC2 /* BandcamperKit.framework */; };
+		4A6BD5D021187BBB00D35FC2 /* BandcamperKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BD5C821187BBB00D35FC2 /* BandcamperKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4A6BD5D621187BDB00D35FC2 /* BandcampService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5D521187BDB00D35FC2 /* BandcampService.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A6BD5CD21187BBB00D35FC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A6BD5A821187B0700D35FC2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A6BD5C721187BBB00D35FC2;
+			remoteInfo = BandcamperKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4A6BD5D421187BBB00D35FC2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4A6BD5D021187BBB00D35FC2 /* BandcamperKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4A6BD5B021187B0700D35FC2 /* Bandcamper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bandcamper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -21,10 +49,22 @@
 		4A6BD5BA21187B0800D35FC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A6BD5BC21187B0800D35FC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A6BD5BD21187B0800D35FC2 /* Bandcamper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bandcamper.entitlements; sourceTree = "<group>"; };
+		4A6BD5C821187BBB00D35FC2 /* BandcamperKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BandcamperKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A6BD5CA21187BBB00D35FC2 /* BandcamperKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BandcamperKit.h; sourceTree = "<group>"; };
+		4A6BD5CB21187BBB00D35FC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A6BD5D521187BDB00D35FC2 /* BandcampService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandcampService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4A6BD5AD21187B0700D35FC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A6BD5CF21187BBB00D35FC2 /* BandcamperKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A6BD5C521187BBB00D35FC2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				4A6BD5B221187B0700D35FC2 /* Bandcamper */,
+				4A6BD5C921187BBB00D35FC2 /* BandcamperKit */,
 				4A6BD5B121187B0700D35FC2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				4A6BD5B021187B0700D35FC2 /* Bandcamper.app */,
+				4A6BD5C821187BBB00D35FC2 /* BandcamperKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,7 +105,28 @@
 			path = Bandcamper;
 			sourceTree = "<group>";
 		};
+		4A6BD5C921187BBB00D35FC2 /* BandcamperKit */ = {
+			isa = PBXGroup;
+			children = (
+				4A6BD5D521187BDB00D35FC2 /* BandcampService.swift */,
+				4A6BD5CA21187BBB00D35FC2 /* BandcamperKit.h */,
+				4A6BD5CB21187BBB00D35FC2 /* Info.plist */,
+			);
+			path = BandcamperKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4A6BD5C321187BBB00D35FC2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A6BD5CC21187BBB00D35FC2 /* BandcamperKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		4A6BD5AF21187B0700D35FC2 /* Bandcamper */ = {
@@ -73,15 +136,35 @@
 				4A6BD5AC21187B0700D35FC2 /* Sources */,
 				4A6BD5AD21187B0700D35FC2 /* Frameworks */,
 				4A6BD5AE21187B0700D35FC2 /* Resources */,
+				4A6BD5D421187BBB00D35FC2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4A6BD5CE21187BBB00D35FC2 /* PBXTargetDependency */,
 			);
 			name = Bandcamper;
 			productName = Bandcamper;
 			productReference = 4A6BD5B021187B0700D35FC2 /* Bandcamper.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4A6BD5C721187BBB00D35FC2 /* BandcamperKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A6BD5D121187BBB00D35FC2 /* Build configuration list for PBXNativeTarget "BandcamperKit" */;
+			buildPhases = (
+				4A6BD5C321187BBB00D35FC2 /* Headers */,
+				4A6BD5C421187BBB00D35FC2 /* Sources */,
+				4A6BD5C521187BBB00D35FC2 /* Frameworks */,
+				4A6BD5C621187BBB00D35FC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BandcamperKit;
+			productName = BandcamperKit;
+			productReference = 4A6BD5C821187BBB00D35FC2 /* BandcamperKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +178,15 @@
 				TargetAttributes = {
 					4A6BD5AF21187B0700D35FC2 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					4A6BD5C721187BBB00D35FC2 = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -112,6 +204,7 @@
 			projectRoot = "";
 			targets = (
 				4A6BD5AF21187B0700D35FC2 /* Bandcamper */,
+				4A6BD5C721187BBB00D35FC2 /* BandcamperKit */,
 			);
 		};
 /* End PBXProject section */
@@ -123,6 +216,13 @@
 			files = (
 				4A6BD5B821187B0800D35FC2 /* Assets.xcassets in Resources */,
 				4A6BD5BB21187B0800D35FC2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A6BD5C621187BBB00D35FC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +238,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4A6BD5C421187BBB00D35FC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A6BD5D621187BDB00D35FC2 /* BandcampService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A6BD5CE21187BBB00D35FC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A6BD5C721187BBB00D35FC2 /* BandcamperKit */;
+			targetProxy = 4A6BD5CD21187BBB00D35FC2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4A6BD5B921187B0800D35FC2 /* Main.storyboard */ = {
@@ -270,6 +386,7 @@
 		4A6BD5C121187B0800D35FC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bandcamper/Bandcamper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -289,6 +406,7 @@
 		4A6BD5C221187B0800D35FC2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Bandcamper/Bandcamper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +420,67 @@
 				PRODUCT_BUNDLE_IDENTIFIER = software.level.Bandcamper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		4A6BD5D221187BBB00D35FC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = F2J52QJQ9Y;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = BandcamperKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = software.level.BandcamperKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4A6BD5D321187BBB00D35FC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = F2J52QJQ9Y;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = BandcamperKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = software.level.BandcamperKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -322,6 +501,15 @@
 			buildConfigurations = (
 				4A6BD5C121187B0800D35FC2 /* Debug */,
 				4A6BD5C221187B0800D35FC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A6BD5D121187BBB00D35FC2 /* Build configuration list for PBXNativeTarget "BandcamperKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A6BD5D221187BBB00D35FC2 /* Debug */,
+				4A6BD5D321187BBB00D35FC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
