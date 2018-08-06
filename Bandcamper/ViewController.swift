@@ -7,9 +7,6 @@ class ViewController: NSViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
-		let bandcampService = BandcampService()
-		bandcampService.getArtist(callback)
 	}
 
 	let callback: (Data?) -> Void = { data in
@@ -25,7 +22,8 @@ class ViewController: NSViewController {
 	}
 
 	@IBAction func didClickButton(_ sender: Any) {
-		NSSound.beep()
+		let bandcampService = BandcampService()
+		bandcampService.getArtist(callback)
 	}
 
 }

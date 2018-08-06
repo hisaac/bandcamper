@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A49E0D82118E4E1002347F3 /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D22118E4E1002347F3 /* Cartfile.private */; };
+		4A49E0D92118E4E1002347F3 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D32118E4E1002347F3 /* .swiftlint.yml */; };
+		4A49E0DA2118E4E1002347F3 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D42118E4E1002347F3 /* Cartfile */; };
+		4A49E0DB2118E4E1002347F3 /* changelog.md in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D52118E4E1002347F3 /* changelog.md */; };
+		4A49E0DC2118E4E1002347F3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D62118E4E1002347F3 /* .gitignore */; };
+		4A49E0DD2118E4E1002347F3 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D72118E4E1002347F3 /* readme.md */; };
 		4A6BD5B421187B0800D35FC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B321187B0800D35FC2 /* AppDelegate.swift */; };
 		4A6BD5B621187B0800D35FC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B521187B0800D35FC2 /* ViewController.swift */; };
 		4A6BD5B821187B0800D35FC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B721187B0800D35FC2 /* Assets.xcassets */; };
@@ -42,6 +48,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4A49E0D22118E4E1002347F3 /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
+		4A49E0D32118E4E1002347F3 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		4A49E0D42118E4E1002347F3 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		4A49E0D52118E4E1002347F3 /* changelog.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = changelog.md; sourceTree = "<group>"; };
+		4A49E0D62118E4E1002347F3 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		4A49E0D72118E4E1002347F3 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		4A6BD5B021187B0700D35FC2 /* Bandcamper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bandcamper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6BD5B321187B0800D35FC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A6BD5B521187B0800D35FC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +89,12 @@
 		4A6BD5A721187B0700D35FC2 = {
 			isa = PBXGroup;
 			children = (
+				4A49E0D72118E4E1002347F3 /* readme.md */,
+				4A49E0D52118E4E1002347F3 /* changelog.md */,
+				4A49E0D42118E4E1002347F3 /* Cartfile */,
+				4A49E0D22118E4E1002347F3 /* Cartfile.private */,
+				4A49E0D62118E4E1002347F3 /* .gitignore */,
+				4A49E0D32118E4E1002347F3 /* .swiftlint.yml */,
 				4A6BD5B221187B0700D35FC2 /* Bandcamper */,
 				4A6BD5C921187BBB00D35FC2 /* BandcamperKit */,
 				4A6BD5B121187B0700D35FC2 /* Products */,
@@ -137,6 +155,7 @@
 				4A6BD5AD21187B0700D35FC2 /* Frameworks */,
 				4A6BD5AE21187B0700D35FC2 /* Resources */,
 				4A6BD5D421187BBB00D35FC2 /* Embed Frameworks */,
+				4A49E0CF2118E491002347F3 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -156,6 +175,7 @@
 				4A6BD5C421187BBB00D35FC2 /* Sources */,
 				4A6BD5C521187BBB00D35FC2 /* Frameworks */,
 				4A6BD5C621187BBB00D35FC2 /* Resources */,
+				4A49E0D12118E4A9002347F3 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -214,7 +234,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A49E0DA2118E4E1002347F3 /* Cartfile in Resources */,
+				4A49E0DC2118E4E1002347F3 /* .gitignore in Resources */,
+				4A49E0D92118E4E1002347F3 /* .swiftlint.yml in Resources */,
 				4A6BD5B821187B0800D35FC2 /* Assets.xcassets in Resources */,
+				4A49E0DB2118E4E1002347F3 /* changelog.md in Resources */,
+				4A49E0D82118E4E1002347F3 /* Cartfile.private in Resources */,
+				4A49E0DD2118E4E1002347F3 /* readme.md in Resources */,
 				4A6BD5BB21187B0800D35FC2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +253,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A49E0CF2118E491002347F3 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		4A49E0D12118E4A9002347F3 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4A6BD5AC21187B0700D35FC2 /* Sources */ = {
