@@ -1,7 +1,7 @@
 // Created by Isaac Halvorson on 8/5/18
 
 import Foundation
-//import SwiftSoup
+import SwiftSoup
 
 public class BandcampService {
 
@@ -13,24 +13,24 @@ public class BandcampService {
 			guard error == nil else { return }
 			guard let data = data else { return }
 			guard let response = response else { return }
-			print(response)
+			self.getDataBlob(from: String(data: data, encoding: .utf8)!)
 			callback(data)
 		}
 
 		dataTask.resume()
 	}
 
-//	private func getDataBlob(from html: String) -> String? {
-//		do {
-//			let document: Document = try SwiftSoup.parse(html)
-//			let centerWrapper = try document.getElementById("centerWrapper")
-//			return try document.text()
-//		} catch Exception.Error(let type, let message) {
-//			print(message)
-//		} catch {
-//			print("error")
-//		}
-//		return nil
-//	}
+	private func getDataBlob(from html: String) -> String? {
+		do {
+			let document: Document = try SwiftSoup.parse(html)
+			let centerWrapper = try document.getElementById("centerWrapper")
+			return try document.text()
+		} catch Exception.Error(let type, let message) {
+			print(message)
+		} catch {
+			print("error")
+		}
+		return nil
+	}
 
 }
