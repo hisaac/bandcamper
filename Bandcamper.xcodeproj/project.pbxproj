@@ -61,6 +61,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4A178A4F2118EFC2004ED71A /* Bandcamper.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Bandcamper.playground; path = /Users/hisaac/code/mine/bandcamper/Bandcamper/Bandcamper.playground; sourceTree = "<absolute>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4A49E0D22118E4E1002347F3 /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
 		4A49E0D32118E4E1002347F3 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4A49E0D42118E4E1002347F3 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
@@ -123,6 +124,7 @@
 		4A6BD5A721187B0700D35FC2 = {
 			isa = PBXGroup;
 			children = (
+				4A178A4F2118EFC2004ED71A /* Bandcamper.playground */,
 				4A49E0D72118E4E1002347F3 /* readme.md */,
 				4A49E0D52118E4E1002347F3 /* changelog.md */,
 				4A49E0D42118E4E1002347F3 /* Cartfile */,
@@ -523,7 +525,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
