@@ -54,6 +54,8 @@
 		4A49E0D52118E4E1002347F3 /* changelog.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = changelog.md; sourceTree = "<group>"; };
 		4A49E0D62118E4E1002347F3 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4A49E0D72118E4E1002347F3 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		4A49E0DF2118E5D3002347F3 /* dobie.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = dobie.html; sourceTree = "<group>"; };
+		4A49E0E02118E5D3002347F3 /* TralbumData.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = TralbumData.js; sourceTree = "<group>"; };
 		4A6BD5B021187B0700D35FC2 /* Bandcamper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bandcamper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6BD5B321187B0800D35FC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A6BD5B521187B0800D35FC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A49E0DE2118E5D3002347F3 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				4A49E0DF2118E5D3002347F3 /* dobie.html */,
+				4A49E0E02118E5D3002347F3 /* TralbumData.js */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
 		4A6BD5A721187B0700D35FC2 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +108,7 @@
 				4A49E0D32118E4E1002347F3 /* .swiftlint.yml */,
 				4A6BD5B221187B0700D35FC2 /* Bandcamper */,
 				4A6BD5C921187BBB00D35FC2 /* BandcamperKit */,
+				4A49E0DE2118E5D3002347F3 /* TestData */,
 				4A6BD5B121187B0700D35FC2 /* Products */,
 			);
 			sourceTree = "<group>";
