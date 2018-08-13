@@ -23,7 +23,7 @@ class ViewController: NSViewController {
 
 	@IBAction func didClickButton(_ sender: Any) {
 		let bandcampService = BandcampService()
-		bandcampService.getArtist(callback)
+		bandcampService.getArtist()
 	}
 
 }

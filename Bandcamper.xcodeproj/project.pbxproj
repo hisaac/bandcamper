@@ -13,6 +13,7 @@
 		4A49E0DB2118E4E1002347F3 /* changelog.md in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D52118E4E1002347F3 /* changelog.md */; };
 		4A49E0DC2118E4E1002347F3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D62118E4E1002347F3 /* .gitignore */; };
 		4A49E0DD2118E4E1002347F3 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D72118E4E1002347F3 /* readme.md */; };
+		4A4C1DDB211F9EAE0098FBD3 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4C1DDA211F9EAE0098FBD3 /* Track.swift */; };
 		4A6BD5B421187B0800D35FC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B321187B0800D35FC2 /* AppDelegate.swift */; };
 		4A6BD5B621187B0800D35FC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B521187B0800D35FC2 /* ViewController.swift */; };
 		4A6BD5B821187B0800D35FC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B721187B0800D35FC2 /* Assets.xcassets */; };
@@ -21,6 +22,8 @@
 		4A6BD5CF21187BBB00D35FC2 /* BandcamperKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BD5C821187BBB00D35FC2 /* BandcamperKit.framework */; };
 		4A6BD5D021187BBB00D35FC2 /* BandcamperKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6BD5C821187BBB00D35FC2 /* BandcamperKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A6BD5D621187BDB00D35FC2 /* BandcampService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5D521187BDB00D35FC2 /* BandcampService.swift */; };
+		4A96E5DD211F941900B864E7 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A96E5DC211F941900B864E7 /* Album.swift */; };
+		4AA184DF2121C6CC00F05559 /* DataBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA184DE2121C6CC00F05559 /* DataBlob.swift */; };
 		4AACAE312118E8F8000EB6A0 /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A49E0E22118E61D002347F3 /* SwiftSoup.framework */; };
 		4AACAE332118E980000EB6A0 /* SwiftSoup.framework in [Carthage] Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4A49E0E22118E61D002347F3 /* SwiftSoup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -71,6 +74,7 @@
 		4A49E0DF2118E5D3002347F3 /* dobie.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = dobie.html; sourceTree = "<group>"; };
 		4A49E0E02118E5D3002347F3 /* TralbumData.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = TralbumData.js; sourceTree = "<group>"; };
 		4A49E0E22118E61D002347F3 /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/Mac/SwiftSoup.framework; sourceTree = "<group>"; };
+		4A4C1DDA211F9EAE0098FBD3 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		4A6BD5B021187B0700D35FC2 /* Bandcamper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bandcamper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6BD5B321187B0800D35FC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A6BD5B521187B0800D35FC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 		4A6BD5CA21187BBB00D35FC2 /* BandcamperKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BandcamperKit.h; sourceTree = "<group>"; };
 		4A6BD5CB21187BBB00D35FC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A6BD5D521187BDB00D35FC2 /* BandcampService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandcampService.swift; sourceTree = "<group>"; };
+		4A96E5DC211F941900B864E7 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		4AA184DE2121C6CC00F05559 /* DataBlob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBlob.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +173,9 @@
 				4A6BD5D521187BDB00D35FC2 /* BandcampService.swift */,
 				4A6BD5CA21187BBB00D35FC2 /* BandcamperKit.h */,
 				4A6BD5CB21187BBB00D35FC2 /* Info.plist */,
+				4A96E5DC211F941900B864E7 /* Album.swift */,
+				4A4C1DDA211F9EAE0098FBD3 /* Track.swift */,
+				4AA184DE2121C6CC00F05559 /* DataBlob.swift */,
 			);
 			path = BandcamperKit;
 			sourceTree = "<group>";
@@ -347,6 +356,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A6BD5D621187BDB00D35FC2 /* BandcampService.swift in Sources */,
+				4A96E5DD211F941900B864E7 /* Album.swift in Sources */,
+				4AA184DF2121C6CC00F05559 /* DataBlob.swift in Sources */,
+				4A4C1DDB211F9EAE0098FBD3 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
