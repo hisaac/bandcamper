@@ -11,50 +11,37 @@ public class BandcampService {
 	public init() {}
 
 	public func getArtist() {
-		let url = URL(string: "https://convergecult.bandcamp.com/album/beautiful-ruin")!
-
-		let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
-			guard error == nil else { return }
-			guard let data = data else { return }
-			guard response != nil else { return }
-			self.getDataBlob(from: String(data: data, encoding: .utf8)!)
+		do {
+			let url = URL(string: "https://convergecult.bandcamp.com/album/beautiful-ruin")!
+			let data = try Data(contentsOf: url)
+			let html = String(data: data, encoding: .utf8)
+			getDataBlob(from: html!)
+		} catch {
+			print("whoops")
 		}
-
-		dataTask.resume()
 	}
 
-	func getArtistLocal() {
-		let html = Bundle.main.path(forResource: "dobie", ofType: "html")!
-		let htmlString = try! String(contentsOfFile: html)
-		getDataBlob(from: htmlString)
+	private func getDataBlob(from html: String) {
+		let firstLevelRegex = "(?s)var TralbumData = (.*?)\\};"
+		let secondLevelRegex = "(?s)\\{(.*?)\\};"
+
+		guard let tralbumData = html.find(regexes: [firstLevelRegex, secondLevelRegex])?.dropLast() else { return }
+
+		guard let stringifiedJSON = JSContext()?.evaluateScript("JSON.stringify(\(tralbumData))").toString() else { return }
+		guard let jsonData = stringifiedJSON.data(using: .utf8) else { return }
+		let albumData = try? JSONDecoder().decode(DataBlob.self, from: jsonData)
+	}
+}
+
+extension String {
+
+	func find(regex: String) -> String {
+		guard let range = self.range(of: regex, options: .regularExpression) else { return "" }
+		return String(self[range])
 	}
 
-	func getDataBlob(from html: String) -> String? {
-		let document: Document = try! SwiftSoup.parse(html)
-		let centerWrapper = try! document.getElementById("centerWrapper")!
-		let scriptElements = try! centerWrapper.select("script")
-
-		for element: Element in scriptElements {
-			let elementString = element.data()
-			if let tralbumDataVariableRange = elementString.range(of: "(?s)var TralbumData = (.*?)\\};", options: .regularExpression) {
-				let tralbumDataString = String(elementString[tralbumDataVariableRange])
-				let tralbumDataVariableString = String(elementString[tralbumDataVariableRange])
-				if let dataRange = tralbumDataVariableString.range(of: "(?s)\\{(.*?)\\};", options: .regularExpression) {
-					let dataText = String(tralbumDataVariableString[dataRange]).dropLast()
-					guard let javascript = JSContext() else { return nil }
-					if let stringifiedJavascript = javascript.evaluateScript("JSON.stringify(\(dataText))"),
-						let jsonString = stringifiedJavascript.toString(),
-						let jsonData = jsonString.data(using: .utf8) {
-						let albumData = try? JSONDecoder().decode(DataBlob.self, from: jsonData)
-						if let thing = albumData?.current.type {
-
-						}
-					}
-				}
-			}
-		}
-
-		return nil
+	func find(regexes: [String]) -> String? {
+		return self.find(regex: regexes[0]).find(regex: regexes[1])
 	}
 
 }
