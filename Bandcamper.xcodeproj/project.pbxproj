@@ -24,6 +24,9 @@
 		4A6BD5D621187BDB00D35FC2 /* BandcampService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5D521187BDB00D35FC2 /* BandcampService.swift */; };
 		4A96E5DD211F941900B864E7 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A96E5DC211F941900B864E7 /* Album.swift */; };
 		4AA184DF2121C6CC00F05559 /* DataBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA184DE2121C6CC00F05559 /* DataBlob.swift */; };
+		4AEF5C7D21245B3900D05EED /* AudioFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF5C7C21245B3900D05EED /* AudioFile.swift */; };
+		4AEF5C7F21245B9200D05EED /* PlayCapData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF5C7E21245B9200D05EED /* PlayCapData.swift */; };
+		4AEF5C8121245BA800D05EED /* TralbumCollectInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF5C8021245BA800D05EED /* TralbumCollectInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		4A6BD5D521187BDB00D35FC2 /* BandcampService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandcampService.swift; sourceTree = "<group>"; };
 		4A96E5DC211F941900B864E7 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		4AA184DE2121C6CC00F05559 /* DataBlob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBlob.swift; sourceTree = "<group>"; };
+		4AEF5C7C21245B3900D05EED /* AudioFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFile.swift; sourceTree = "<group>"; };
+		4AEF5C7E21245B9200D05EED /* PlayCapData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCapData.swift; sourceTree = "<group>"; };
+		4AEF5C8021245BA800D05EED /* TralbumCollectInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TralbumCollectInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,9 @@
 		4A6BD5C921187BBB00D35FC2 /* BandcamperKit */ = {
 			isa = PBXGroup;
 			children = (
+				4AEF5C7E21245B9200D05EED /* PlayCapData.swift */,
+				4AEF5C8021245BA800D05EED /* TralbumCollectInfo.swift */,
+				4AEF5C7C21245B3900D05EED /* AudioFile.swift */,
 				4A6BD5D521187BDB00D35FC2 /* BandcampService.swift */,
 				4A6BD5CA21187BBB00D35FC2 /* BandcamperKit.h */,
 				4A6BD5CB21187BBB00D35FC2 /* Info.plist */,
@@ -340,10 +349,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AEF5C7D21245B3900D05EED /* AudioFile.swift in Sources */,
 				4A6BD5D621187BDB00D35FC2 /* BandcampService.swift in Sources */,
 				4A96E5DD211F941900B864E7 /* Album.swift in Sources */,
 				4AA184DF2121C6CC00F05559 /* DataBlob.swift in Sources */,
+				4AEF5C7F21245B9200D05EED /* PlayCapData.swift in Sources */,
 				4A4C1DDB211F9EAE0098FBD3 /* Track.swift in Sources */,
+				4AEF5C8121245BA800D05EED /* TralbumCollectInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
