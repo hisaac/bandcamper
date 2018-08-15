@@ -3,13 +3,13 @@
 struct Album: Decodable {
 
 	let type: String
-	let art_id: Int
-	let set_price: Double
+//	let art_id: Int
+//	let set_price: Double
 //	let publish_date: Date
-	let upc: String
-	let band_id: Int
-	let new_desc_format: Int
-	let minimum_price_nonzero: Double
+//	let upc: String
+//	let band_id: Int
+//	let new_desc_format: Int
+//	let minimum_price_nonzero: Double
 //	let auto_repriced: Bool
 //	let minimum_price: Double
 //	let title: String
@@ -35,13 +35,13 @@ struct Album: Decodable {
 
 	private enum CodingKeys: String, CodingKey {
 		case type
-		case art_id
-		case set_price
+//		case art_id
+//		case set_price
 //		case publish_date
-		case upc
-		case band_id
-		case new_desc_format
-		case minimum_price_nonzero
+//		case upc
+//		case band_id
+//		case new_desc_format
+//		case minimum_price_nonzero
 //		case auto_repriced
 //		case minimum_price
 //		case title

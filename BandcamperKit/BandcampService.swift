@@ -26,8 +26,10 @@ public class BandcampService {
 		let secondLevelRegex = "(?s)\\{(.*?)\\};"
 
 		guard let tralbumData = html.find(regexes: [firstLevelRegex, secondLevelRegex])?.dropLast() else { return }
+		print(tralbumData)
 
 		guard let stringifiedJSON = JSContext()?.evaluateScript("JSON.stringify(\(tralbumData))").toString() else { return }
+		print(stringifiedJSON)
 		guard let jsonData = stringifiedJSON.data(using: .utf8) else { return }
 		let albumData = try? JSONDecoder().decode(DataBlob.self, from: jsonData)
 	}

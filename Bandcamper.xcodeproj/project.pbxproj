@@ -24,8 +24,6 @@
 		4A6BD5D621187BDB00D35FC2 /* BandcampService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5D521187BDB00D35FC2 /* BandcampService.swift */; };
 		4A96E5DD211F941900B864E7 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A96E5DC211F941900B864E7 /* Album.swift */; };
 		4AA184DF2121C6CC00F05559 /* DataBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA184DE2121C6CC00F05559 /* DataBlob.swift */; };
-		4AACAE312118E8F8000EB6A0 /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A49E0E22118E61D002347F3 /* SwiftSoup.framework */; };
-		4AACAE332118E980000EB6A0 /* SwiftSoup.framework in [Carthage] Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4A49E0E22118E61D002347F3 /* SwiftSoup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,17 +46,6 @@
 				4A6BD5D021187BBB00D35FC2 /* BandcamperKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4AACAE322118E96D000EB6A0 /* [Carthage] Copy Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				4AACAE332118E980000EB6A0 /* SwiftSoup.framework in [Carthage] Copy Frameworks */,
-			);
-			name = "[Carthage] Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -103,7 +90,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AACAE312118E8F8000EB6A0 /* SwiftSoup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +208,6 @@
 				4A6BD5C421187BBB00D35FC2 /* Sources */,
 				4A6BD5C521187BBB00D35FC2 /* Frameworks */,
 				4A6BD5C621187BBB00D35FC2 /* Resources */,
-				4AACAE322118E96D000EB6A0 /* [Carthage] Copy Frameworks */,
 				4A49E0D12118E4A9002347F3 /* [Swiftlint] */,
 			);
 			buildRules = (

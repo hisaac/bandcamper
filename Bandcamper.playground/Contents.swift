@@ -1,5 +1,4 @@
 import Cocoa
-import SwiftSoup
 import JavaScriptCore
 
 // swiftlint:disable all
