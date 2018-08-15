@@ -162,12 +162,12 @@
 		4A6BD5C921187BBB00D35FC2 /* BandcamperKit */ = {
 			isa = PBXGroup;
 			children = (
+				4A6BD5CA21187BBB00D35FC2 /* BandcamperKit.h */,
+				4A6BD5CB21187BBB00D35FC2 /* Info.plist */,
 				4AEF5C7E21245B9200D05EED /* PlayCapData.swift */,
 				4AEF5C8021245BA800D05EED /* TralbumCollectInfo.swift */,
 				4AEF5C7C21245B3900D05EED /* AudioFile.swift */,
 				4A6BD5D521187BDB00D35FC2 /* BandcampService.swift */,
-				4A6BD5CA21187BBB00D35FC2 /* BandcamperKit.h */,
-				4A6BD5CB21187BBB00D35FC2 /* Info.plist */,
 				4A96E5DC211F941900B864E7 /* Album.swift */,
 				4A4C1DDA211F9EAE0098FBD3 /* Track.swift */,
 				4AA184DE2121C6CC00F05559 /* DataBlob.swift */,

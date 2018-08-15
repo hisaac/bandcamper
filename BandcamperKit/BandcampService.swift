@@ -22,28 +22,19 @@ public class BandcampService {
 	}
 
 	private func getDataBlob(from html: String) {
-		let firstLevelRegex = "(?s)var TralbumData = (.*?)\\};"
-		let secondLevelRegex = "(?s)\\{(.*?)\\};"
+		let regex = try! NSRegularExpression(pattern: "(?s)var TralbumData = (.*?);")
 
-		guard let tralbumData = html.find(regexes: [firstLevelRegex, secondLevelRegex])?.dropLast() else { return }
-		print(tralbumData)
+		guard let result = regex.firstMatch(in: html, range: NSMakeRange(0, html.count)) else { return }
+		let resultRange = result.range(at: 1)
 
-		guard let stringifiedJSON = JSContext()?.evaluateScript("JSON.stringify(\(tralbumData))").toString() else { return }
-		print(stringifiedJSON)
-		guard let jsonData = stringifiedJSON.data(using: .utf8) else { return }
+		guard let range = Range(resultRange, in: html) else { return }
+		let tralbumData = String(html[range])
+
+		guard let stringifiedJSON = JSContext()?.evaluateScript("JSON.stringify(\(tralbumData))").toString(),
+			let jsonData = stringifiedJSON.data(using: .utf8) else {
+				return
+		}
+
 		let albumData = try? JSONDecoder().decode(DataBlob.self, from: jsonData)
 	}
-}
-
-extension String {
-
-	func find(regex: String) -> String {
-		guard let range = self.range(of: regex, options: .regularExpression) else { return "" }
-		return String(self[range])
-	}
-
-	func find(regexes: [String]) -> String? {
-		return self.find(regex: regexes[0]).find(regex: regexes[1])
-	}
-
 }
