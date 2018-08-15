@@ -11,7 +11,7 @@ struct Album: Decodable {
 	private(set) var autoRepriced: Bool?
 	private(set) var bandID: Int?
 	private(set) var credits: String?
-	private(set) var downloadDescID: Int?
+	private(set) var downloadDescriptionID: Int?
 	private(set) var downloadPref: Int?
 	private(set) var featuredTrackID: Int?
 	private(set) var id: Int?
@@ -22,7 +22,7 @@ struct Album: Decodable {
 	private(set) var minimumPriceNonzero: Decimal?
 	private(set) var modDate: Date?
 	private(set) var newDate: Date?
-	private(set) var newDescFormat: Int?
+	private(set) var newDescriptionFormat: Int?
 	private(set) var publishDate: Date?
 	private(set) var purchaseTitle: String?
 	private(set) var purchaseURL: URL?
@@ -43,7 +43,7 @@ struct Album: Decodable {
 		case autoRepriced = "auto_repriced"
 		case bandID = "band_id"
 		case credits
-		case downloadDescID = "download_desc_id"
+		case downloadDescriptionID = "download_desc_id"
 		case downloadPref = "download_pref"
 		case featuredTrackID = "featured_track_id"
 		case id
@@ -54,7 +54,7 @@ struct Album: Decodable {
 		case minimumPriceNonzero = "minimum_price_nonzero"
 		case modDate = "mod_date"
 		case newDate = "new_date"
-		case newDescFormat = "new_desc_format"
+		case newDescriptionFormat = "new_desc_format"
 		case publishDate = "publish_date"
 		case purchaseTitle = "purchase_title"
 		case purchaseURL = "purchase_url"
@@ -78,7 +78,7 @@ struct Album: Decodable {
 		autoRepriced = try container.decodeIfPresent(Bool.self, forKey: .autoRepriced)
 		bandID = try container.decodeIfPresent(Int.self, forKey: .bandID)
 		credits = try container.decodeIfPresent(String.self, forKey: .credits)
-		downloadDescID = try container.decodeIfPresent(Int.self, forKey: .downloadDescID)
+		downloadDescriptionID = try container.decodeIfPresent(Int.self, forKey: .downloadDescriptionID)
 		downloadPref = try container.decodeIfPresent(Int.self, forKey: .downloadPref)
 		featuredTrackID = try container.decodeIfPresent(Int.self, forKey: .featuredTrackID)
 		id = try container.decodeIfPresent(Int.self, forKey: .id)
@@ -89,7 +89,7 @@ struct Album: Decodable {
 		minimumPriceNonzero = try container.decodeIfPresent(Decimal.self, forKey: .minimumPriceNonzero)
 		modDate = try container.decodeIfPresent(Date.self, forKey: .modDate)
 		newDate = try container.decodeIfPresent(Date.self, forKey: .newDate)
-		newDescFormat = try container.decodeIfPresent(Int.self, forKey: .newDescFormat)
+		newDescriptionFormat = try container.decodeIfPresent(Int.self, forKey: .newDescriptionFormat)
 		publishDate = try container.decodeIfPresent(Date.self, forKey: .publishDate)
 		purchaseTitle = try container.decodeIfPresent(String.self, forKey: .purchaseTitle)
 		purchaseURL = try container.decodeIfPresent(URL.self, forKey: .purchaseURL)

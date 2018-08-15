@@ -28,7 +28,7 @@ struct DataBlob: Decodable {
 	private(set) var lastSubscriptionItem: Int? // ?
 	private(set) var licensedVersionIDs: [Int]? // ?
 	private(set) var packageAssociatedLicenseID: Int? // ?
-	private(set) var packages: Int? // ?
+	private(set) var packages: [Package]? // ?
 	private(set) var paid: Int?
 	private(set) var playCapData: PlayCapData?
 	private(set) var playingFrom: String?
@@ -99,7 +99,7 @@ struct DataBlob: Decodable {
 		lastSubscriptionItem = try container.decodeIfPresent(Int.self, forKey: .lastSubscriptionItem)
 		licensedVersionIDs = try container.decodeIfPresent([Int].self, forKey: .licensedVersionIDs)
 		packageAssociatedLicenseID = try container.decodeIfPresent(Int.self, forKey: .packageAssociatedLicenseID)
-		packages = try container.decodeIfPresent(Int.self, forKey: .packages)
+		packages = try container.decodeIfPresent([Package].self, forKey: .packages)
 		paid = try container.decodeIfPresent(Int.self, forKey: .paid)
 		playCapData = try container.decodeIfPresent(PlayCapData.self, forKey: .playCapData)
 		playingFrom = try container.decodeIfPresent(String.self, forKey: .playingFrom)
