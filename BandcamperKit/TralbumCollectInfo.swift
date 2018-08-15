@@ -2,11 +2,11 @@
 
 struct TralbumCollectInfo: Decodable {
 	let showCollect: Bool
-	let showWhitelistTooltip: Bool
+	let showWishlistTooltip: Bool
 
 	private enum CodingKeys: String, CodingKey {
 		case showCollect = "show_collect"
-		case showWhitelistTooltip = "show_whitelist_tooltip"
+		case showWishlistTooltip = "show_wishlist_tooltip"
 	}
 }
 

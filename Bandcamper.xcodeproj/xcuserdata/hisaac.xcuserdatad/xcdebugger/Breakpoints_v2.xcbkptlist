@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BandcamperKit/BandcampService.swift"
-            timestampString = "556037043.555981"
+            filePath = "BandcamperKit/DataBlob.swift"
+            timestampString = "556048366.913609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "getDataBlob(from:)"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "init(from:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

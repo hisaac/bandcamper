@@ -35,6 +35,8 @@ public class BandcampService {
 				return
 		}
 
+		print(stringifiedJSON)
+
 		let albumData = try? JSONDecoder().decode(DataBlob.self, from: jsonData)
 	}
 }
