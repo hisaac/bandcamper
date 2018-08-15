@@ -9,21 +9,22 @@ class ViewController: NSViewController {
 		super.viewDidLoad()
 	}
 
-	let callback: (Data?) -> Void = { data in
-		guard let data = data else { return }
-		let dataString = String(data: data, encoding: .utf8)
-		print("\(dataString ?? "no data")")
-	}
-
 	override var representedObject: Any? {
 		didSet {
 		// Update the view, if already loaded.
 		}
 	}
 
+	let callback: (DataBlob) -> Void = { dataBlob in
+		print(String(describing: dataBlob))
+	}
+
 	@IBAction func didClickButton(_ sender: Any) {
 		let bandcampService = BandcampService()
-		bandcampService.getArtist()
+		bandcampService.getAlbum(
+			at: "https://convergecult.bandcamp.com/album/beautiful-ruin",
+			callback: callback
+		)
 	}
 
 }

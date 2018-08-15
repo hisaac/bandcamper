@@ -1,41 +1,41 @@
 // Created by Isaac Halvorson on 8/11/18
 
-struct Track: Decodable {
+public struct Track: Decodable {
 
-	let albumPreorder: Bool
-	let altLink: String
-	let duration: Double
-	let encodingError: Bool
-	let encodingPending: Bool
-	let encodingsID: Int
-	let audioFile: AudioFile
-	let freeAlbumDownload: Bool
-	let hasFreeDownload: Bool
-	let hasInfo: Bool
-	let hasLyrics: Bool
-	let id: Int
-	let isCapped: Bool
-	let isDownloadable: Bool
-	let isDraft: Bool
-	let licenseType: Int
-	let lyrics: String
-	let playCount: Int
-	let _private: Bool
-	let sizeOfLyrics: Int
-	let streaming: Int
-	let titleLink: String
-	let title: String
-	let trackID: Int
-	let trackLicenseID: String
-	let trackNumber: Int
-	let unreleasedTrack: Bool
-	let videoCaption: String
-	let videoFeatured: Bool
-	let videoID: Int
-	let videoMobileURL: String
-	let videoPosterURL: String
-	let videoSourceID: Int
-	let videoSourceType: String
+	private(set) var albumPreorder: Bool?
+	private(set) var altLink: String?
+	private(set) var duration: TimeInterval?
+	private(set) var encodingError: Bool?
+	private(set) var encodingPending: Bool?
+	private(set) var encodingsID: Int?
+	private(set) var audioFile: AudioFile?
+	private(set) var freeAlbumDownload: Bool?
+	private(set) var hasFreeDownload: Bool?
+	private(set) var hasInfo: Bool?
+	private(set) var hasLyrics: Bool?
+	private(set) var id: Int?
+	private(set) var isCapped: Bool?
+	private(set) var isDownloadable: Bool?
+	private(set) var isDraft: Bool?
+	private(set) var isPrivate: Bool?
+	private(set) var licenseType: Int?
+	private(set) var lyrics: String?
+	private(set) var playCount: Int?
+	private(set) var sizeOfLyrics: Int?
+	private(set) var streaming: Int?
+	private(set) var titleLink: String?
+	private(set) var title: String?
+	private(set) var trackID: Int?
+	private(set) var trackLicenseID: Int?
+	private(set) var trackNumber: Int?
+	private(set) var unreleasedTrack: Bool?
+	private(set) var videoCaption: Bool?
+	private(set) var videoFeatured: Bool?
+	private(set) var videoID: Int?
+	private(set) var videoMobileURL: URL?
+	private(set) var videoPosterURL: URL?
+	private(set) var videoSourceID: Int?
+	private(set) var videoSourceType: String?
 
 	private enum CodingKeys: String, CodingKey {
 		case albumPreorder = "album_preorder"
@@ -53,10 +53,10 @@ struct Track: Decodable {
 		case isCapped = "is_capped"
 		case isDownloadable = "is_downloadable"
 		case isDraft = "is_draft"
+		case isPrivate = "private"
 		case licenseType = "license_type"
 		case lyrics
 		case playCount = "play_count"
-		case _private = "private"
 		case sizeOfLyrics = "sizeof_lyrics"
 		case streaming
 		case titleLink = "title_link"
@@ -72,6 +72,45 @@ struct Track: Decodable {
 		case videoPosterURL = "video_poster_url"
 		case videoSourceID = "video_source_id"
 		case videoSourceType = "video_source_type"
+	}
+
+	public init(from decoder: Decoder) throws {
+		let container = try decoder.container(keyedBy: CodingKeys.self)
+
+		albumPreorder = try container.decodeIfPresent(Bool.self, forKey: .albumPreorder)
+		altLink = try container.decodeIfPresent(String.self, forKey: .altLink)
+		duration = try container.decodeIfPresent(TimeInterval.self, forKey: .duration)
+		encodingError = try container.decodeIfPresent(Bool.self, forKey: .encodingError)
+		encodingPending = try container.decodeIfPresent(Bool.self, forKey: .encodingPending)
+		encodingsID = try container.decodeIfPresent(Int.self, forKey: .encodingsID)
+		audioFile = try container.decodeIfPresent(AudioFile.self, forKey: .audioFile)
+		freeAlbumDownload = try container.decodeIfPresent(Bool.self, forKey: .freeAlbumDownload)
+		hasFreeDownload = try container.decodeIfPresent(Bool.self, forKey: .hasFreeDownload)
+		hasInfo = try container.decodeIfPresent(Bool.self, forKey: .hasInfo)
+		hasLyrics = try container.decodeIfPresent(Bool.self, forKey: .hasLyrics)
+		id = try container.decodeIfPresent(Int.self, forKey: .id)
+		isCapped = try container.decodeIfPresent(Bool.self, forKey: .isCapped)
+		isDownloadable = try container.decodeIfPresent(Bool.self, forKey: .isDownloadable)
+		isDraft = try container.decodeIfPresent(Bool.self, forKey: .isDraft)
+		isPrivate = try container.decodeIfPresent(Bool.self, forKey: .isPrivate)
+		licenseType = try container.decodeIfPresent(Int.self, forKey: .licenseType)
+		lyrics = try container.decodeIfPresent(String.self, forKey: .lyrics)
+		playCount = try container.decodeIfPresent(Int.self, forKey: .playCount)
+		sizeOfLyrics = try container.decodeIfPresent(Int.self, forKey: .sizeOfLyrics)
+		streaming = try container.decodeIfPresent(Int.self, forKey: .streaming)
+		titleLink = try container.decodeIfPresent(String.self, forKey: .titleLink)
+		title = try container.decodeIfPresent(String.self, forKey: .title)
+		trackID = try container.decodeIfPresent(Int.self, forKey: .trackID)
+		trackLicenseID = try container.decodeIfPresent(Int.self, forKey: .trackLicenseID)
+		trackNumber = try container.decodeIfPresent(Int.self, forKey: .trackNumber)
+		unreleasedTrack = try container.decodeIfPresent(Bool.self, forKey: .unreleasedTrack)
+		videoCaption = try container.decodeIfPresent(Bool.self, forKey: .videoCaption)
+		videoFeatured = try container.decodeIfPresent(Bool.self, forKey: .videoFeatured)
+		videoID = try container.decodeIfPresent(Int.self, forKey: .videoID)
+		videoMobileURL = try container.decodeIfPresent(URL.self, forKey: .videoMobileURL)
+		videoPosterURL = try container.decodeIfPresent(URL.self, forKey: .videoPosterURL)
+		videoSourceID = try container.decodeIfPresent(Int.self, forKey: .videoSourceID)
+		videoSourceType = try container.decodeIfPresent(String.self, forKey: .videoSourceType)
 	}
 
 }

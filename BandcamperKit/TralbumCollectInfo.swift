@@ -1,8 +1,8 @@
 // Created by Isaac Halvorson on 8/15/18
 
-struct TralbumCollectInfo: Decodable {
-	let showCollect: Bool
-	let showWishlistTooltip: Bool
+public struct TralbumCollectInfo: Decodable {
+	private(set) var showCollect: Bool?
+	private(set) var showWishlistTooltip: Bool?
 
 	private enum CodingKeys: String, CodingKey {
 		case showCollect = "show_collect"

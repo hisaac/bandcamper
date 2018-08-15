@@ -1,39 +1,39 @@
 // Created by Isaac Halvorson on 8/13/18
 
-struct DataBlob: Decodable {
+public struct DataBlob: Decodable {
 
-	var album: Album?
-	var albumIsPreorder: Bool?
-	var albumReleaseDate: Date?
-	var artID: Int?
-	var artist: String?
-	var clientIDSig: String?
-	var defaultPrice: Decimal? // ?
-	var featuredTrackID: Int?
-	var free: Int?
-	var freeDownloadPage: String? // ?
-	var hasAudio: Bool?
-	var hasDiscounts: Bool? // ?
-	var id: Int?
-	var initialTrackNum: Int?
-	var isBandMember: Bool?
-	var isBonus: Bool? // ?
-	var isPreorder: Bool?
-	var isPrivateStream: Bool?
-	var isPurchased: Bool?
-	var itemsPurchased: Int? // ?
-	var itemType: String?
-	var lastSubscriptionItem: Int? // ?
-	var licensedVersionIDs: [Int]? // ?
-	var packageAssociatedLicenseID: Int? // ?
-	var packages: Int? // ?
-	var paid: Int?
-	var playCapData: PlayCapData?
-	var playingFrom: String?
-	var preorderCount: Int?
-	var tracks: [Track]?
-	var tralbumCollectInfo: TralbumCollectInfo?
-	var url: String?
+	private(set) var album: Album?
+	private(set) var albumIsPreorder: Bool?
+	private(set) var albumReleaseDate: Date?
+	private(set) var artID: Int?
+	private(set) var artist: String?
+	private(set) var clientIDSig: String?
+	private(set) var defaultPrice: Decimal? // ?
+	private(set) var featuredTrackID: Int?
+	private(set) var free: Int?
+	private(set) var freeDownloadPage: String? // ?
+	private(set) var hasAudio: Bool?
+	private(set) var hasDiscounts: Bool? // ?
+	private(set) var id: Int?
+	private(set) var initialTrackNum: Int?
+	private(set) var isBandMember: Bool?
+	private(set) var isBonus: Bool? // ?
+	private(set) var isPreorder: Bool?
+	private(set) var isPrivateStream: Bool?
+	private(set) var isPurchased: Bool?
+	private(set) var itemsPurchased: Int? // ?
+	private(set) var itemType: String?
+	private(set) var lastSubscriptionItem: Int? // ?
+	private(set) var licensedVersionIDs: [Int]? // ?
+	private(set) var packageAssociatedLicenseID: Int? // ?
+	private(set) var packages: Int? // ?
+	private(set) var paid: Int?
+	private(set) var playCapData: PlayCapData?
+	private(set) var playingFrom: String?
+	private(set) var preorderCount: Int?
+	private(set) var tracks: [Track]?
+	private(set) var tralbumCollectInfo: TralbumCollectInfo?
+	private(set) var url: URL?
 
 	enum CodingKeys: String, CodingKey {
 		case album = "current"
@@ -73,9 +73,9 @@ struct DataBlob: Decodable {
 	public init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 
-//		album = try container.decodeIfPresent(Album.self, forKey: .album)
+		album = try container.decodeIfPresent(Album.self, forKey: .album)
 		albumIsPreorder = try container.decodeIfPresent(Bool.self, forKey: .albumIsPreorder)
-//		albumReleaseDate
+		albumReleaseDate = try container.decodeIfPresent(Date.self, forKey: .albumReleaseDate)
 		artID = try container.decodeIfPresent(Int.self, forKey: .artID)
 		artist = try container.decodeIfPresent(String.self, forKey: .artist)
 		clientIDSig = try container.decodeIfPresent(String.self, forKey: .clientIDSig)
@@ -92,19 +92,19 @@ struct DataBlob: Decodable {
 		isPreorder = try container.decodeIfPresent(Bool.self, forKey: .isPreorder)
 		isPrivateStream = try container.decodeIfPresent(Bool.self, forKey: .isPrivateStream)
 		isPurchased = try container.decodeIfPresent(Bool.self, forKey: .isPurchased)
-//		itemsPurchased
+		itemsPurchased = try container.decodeIfPresent(Int.self, forKey: .itemsPurchased)
 		itemType = try container.decodeIfPresent(String.self, forKey: .itemType)
-//		lastSubscriptionItem
-//		licensedVersionIDs
-//		packageAssociatedLicenseID
-//		packages
+		lastSubscriptionItem = try container.decodeIfPresent(Int.self, forKey: .lastSubscriptionItem)
+		licensedVersionIDs = try container.decodeIfPresent([Int].self, forKey: .licensedVersionIDs)
+		packageAssociatedLicenseID = try container.decodeIfPresent(Int.self, forKey: .packageAssociatedLicenseID)
+		packages = try container.decodeIfPresent(Int.self, forKey: .packages)
 		paid = try container.decodeIfPresent(Int.self, forKey: .paid)
 		playCapData = try container.decodeIfPresent(PlayCapData.self, forKey: .playCapData)
 		playingFrom = try container.decodeIfPresent(String.self, forKey: .playingFrom)
 		preorderCount = try container.decodeIfPresent(Int.self, forKey: .preorderCount)
-//		tracks = try container.decodeIfPresent([Track].self, forKey: .tracks)
+		tracks = try container.decodeIfPresent([Track].self, forKey: .tracks)
 		tralbumCollectInfo = try container.decodeIfPresent(TralbumCollectInfo.self, forKey: .tralbumCollectInfo)
-		url = try container.decodeIfPresent(String.self, forKey: .url)
+		url = try container.decodeIfPresent(URL.self, forKey: .url)
 	}
 
 }

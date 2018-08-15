@@ -1,8 +1,8 @@
 // Created by Isaac Halvorson on 8/15/18
 
-struct AudioFile: Codable {
-	let mp3_128: String
-	let mp3_v0: String
+public struct AudioFile: Codable {
+	private(set) var mp3_128: URL?
+	private(set) var mp3_v0: URL?
 
 	private enum CodingKeys: String, CodingKey {
 		case mp3_128 = "mp3-128"
