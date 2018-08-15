@@ -1,5 +1,7 @@
 // Created by Isaac Halvorson on 8/15/18
 
+import Foundation
+
 extension DateFormatter {
 
 	static let bandcampDateFormatter: DateFormatter = {

@@ -1,6 +1,8 @@
 // Created by Isaac Halvorson on 8/11/18
 
-public struct Track: Decodable {
+import Foundation
+
+struct Track: Decodable {
 
 	private(set) var albumPreorder: Bool?
 	private(set) var altLink: String?
@@ -74,7 +76,7 @@ public struct Track: Decodable {
 		case videoSourceType = "video_source_type"
 	}
 
-	public init(from decoder: Decoder) throws {
+	init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 
 		albumPreorder = try container.decodeIfPresent(Bool.self, forKey: .albumPreorder)

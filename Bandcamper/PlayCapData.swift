@@ -1,6 +1,6 @@
 // Created by Isaac Halvorson on 8/15/18
 
-public struct PlayCapData: Decodable {
+struct PlayCapData: Decodable {
 	private(set) var streamingLimit: Int?
 	private(set) var streamingLimitsEnabled: Bool?
 

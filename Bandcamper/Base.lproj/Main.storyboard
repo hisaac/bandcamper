@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.3.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.13.2"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -707,29 +707,59 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Bandcamper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="273"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o1j-PN-xB8">
-                                <rect key="frame" x="200" y="117" width="81" height="32"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mGR-sT-Isq">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="didClickButton:" target="XfG-lQ-9wD" id="75G-vQ-flT"/>
-                                </connections>
-                            </button>
+                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="15" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gMi-YS-V5W">
+                                <rect key="frame" x="16" y="108" width="448" height="58"/>
+                                <subviews>
+                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1Ez-E2-iBK">
+                                        <rect key="frame" x="0.0" y="36" width="448" height="22"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="F9N-lF-Gbd">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="o1j-PN-xB8">
+                                        <rect key="frame" x="191" y="-7" width="66" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Play" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mGR-sT-Isq">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="didClickButton:" target="XfG-lQ-9wD" id="75G-vQ-flT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="1Ez-E2-iBK" firstAttribute="leading" secondItem="gMi-YS-V5W" secondAttribute="leading" id="VB8-Cw-HTx"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Ez-E2-iBK" secondAttribute="trailing" id="nuw-tl-fkv"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="o1j-PN-xB8" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="3O4-qg-KSM"/>
-                            <constraint firstItem="o1j-PN-xB8" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="yOW-Zj-BWv"/>
+                            <constraint firstItem="gMi-YS-V5W" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Kg4-Rx-i3f"/>
+                            <constraint firstAttribute="trailing" secondItem="gMi-YS-V5W" secondAttribute="trailing" constant="16" id="NeT-Sa-OK5"/>
+                            <constraint firstItem="gMi-YS-V5W" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="oPP-bu-ZWG"/>
+                            <constraint firstItem="gMi-YS-V5W" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="u2M-CZ-gpK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="1Ez-E2-iBK" id="qqR-cv-aQO"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="762.5"/>
         </scene>
     </scenes>
 </document>

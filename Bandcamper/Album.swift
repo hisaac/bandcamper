@@ -1,6 +1,8 @@
 // Created by Isaac Halvorson on 8/11/18
 
-public struct Album: Decodable {
+import Foundation
+
+struct Album: Decodable {
 
 	private(set) var about: String?
 	private(set) var artID: Int?
@@ -66,7 +68,7 @@ public struct Album: Decodable {
 		case upc
 	}
 
-	public init(from decoder: Decoder) throws {
+	init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 
 		about = try container.decodeIfPresent(String.self, forKey: .about)

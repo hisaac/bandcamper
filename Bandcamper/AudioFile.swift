@@ -1,8 +1,14 @@
 // Created by Isaac Halvorson on 8/15/18
 
-public struct AudioFile: Codable {
-	private(set) var mp3_128: URL?
+import Foundation
+
+struct AudioFile: Decodable {
+	private(set) var mp3_128: URL
 	private(set) var mp3_v0: URL?
+
+	var highestQuality: URL {
+		return mp3_v0 ?? mp3_128
+	}
 
 	private enum CodingKeys: String, CodingKey {
 		case mp3_128 = "mp3-128"

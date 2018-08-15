@@ -1,6 +1,6 @@
 // Created by Isaac Halvorson on 8/15/18
 
-public struct TralbumCollectInfo: Decodable {
+struct TralbumCollectInfo: Decodable {
 	private(set) var showCollect: Bool?
 	private(set) var showWishlistTooltip: Bool?
 

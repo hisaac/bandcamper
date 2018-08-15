@@ -2,15 +2,12 @@
 
 import Foundation
 import JavaScriptCore
-import SwiftSoup
 
 // swiftlint:disable all
 
-public class BandcampService {
+class BandcampService {
 
-	public init() {}
-
-	public func getAlbum(at url: String, callback: @escaping (DataBlob) -> Void) {
+	func getAlbum(at url: String, callback: @escaping (DataBlob) -> Void) {
 		guard let url = URL(string: url) else { return }
 
 		do {

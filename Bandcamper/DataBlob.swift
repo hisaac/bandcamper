@@ -1,6 +1,8 @@
 // Created by Isaac Halvorson on 8/13/18
 
-public struct DataBlob: Decodable {
+import Foundation
+
+struct DataBlob: Decodable {
 
 	private(set) var album: Album?
 	private(set) var albumIsPreorder: Bool?
@@ -70,7 +72,7 @@ public struct DataBlob: Decodable {
 		case url
 	}
 
-	public init(from decoder: Decoder) throws {
+	init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 
 		album = try container.decodeIfPresent(Album.self, forKey: .album)
