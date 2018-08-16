@@ -32,11 +32,11 @@ struct Track: Decodable {
 	private(set) var trackNumber: Int?
 	private(set) var unreleasedTrack: Bool?
 	private(set) var videoCaption: Bool?
-	private(set) var videoFeatured: Bool?
+	private(set) var videoFeatured: Int?
 	private(set) var videoID: Int?
 	private(set) var videoMobileURL: URL?
 	private(set) var videoPosterURL: URL?
-	private(set) var videoSourceID: Int?
+	private(set) var videoSourceID: String?
 	private(set) var videoSourceType: String?
 
 	private enum CodingKeys: String, CodingKey {
@@ -107,11 +107,11 @@ struct Track: Decodable {
 		trackNumber = try container.decodeIfPresent(Int.self, forKey: .trackNumber)
 		unreleasedTrack = try container.decodeIfPresent(Bool.self, forKey: .unreleasedTrack)
 		videoCaption = try container.decodeIfPresent(Bool.self, forKey: .videoCaption)
-		videoFeatured = try container.decodeIfPresent(Bool.self, forKey: .videoFeatured)
+		videoFeatured = try container.decodeIfPresent(Int.self, forKey: .videoFeatured)
 		videoID = try container.decodeIfPresent(Int.self, forKey: .videoID)
 		videoMobileURL = try container.decodeIfPresent(URL.self, forKey: .videoMobileURL)
 		videoPosterURL = try container.decodeIfPresent(URL.self, forKey: .videoPosterURL)
-		videoSourceID = try container.decodeIfPresent(Int.self, forKey: .videoSourceID)
+		videoSourceID = try container.decodeIfPresent(String.self, forKey: .videoSourceID)
 		videoSourceType = try container.decodeIfPresent(String.self, forKey: .videoSourceType)
 	}
 

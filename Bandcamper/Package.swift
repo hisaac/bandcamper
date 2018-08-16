@@ -15,7 +15,7 @@ struct Package: Decodable {
 	private(set) var arts: [Art]?
 	private(set) var associatedLicenseID: Int?
 	private(set) var bandID: Int?
-	private(set) var certifiedSeller: Bool?
+	private(set) var certifiedSeller: Int?
 	private(set) var country: String?
 	private(set) var currency: String?
 	private(set) var descriptionPart1: String?
@@ -129,7 +129,7 @@ struct Package: Decodable {
 		arts = try container.decodeIfPresent([Art].self, forKey: .arts)
 		associatedLicenseID = try container.decodeIfPresent(Int.self, forKey: .associatedLicenseID)
 		bandID = try container.decodeIfPresent(Int.self, forKey: .bandID)
-		certifiedSeller = try container.decodeIfPresent(Bool.self, forKey: .certifiedSeller)
+		certifiedSeller = try container.decodeIfPresent(Int.self, forKey: .certifiedSeller)
 		country = try container.decodeIfPresent(String.self, forKey: .country)
 		currency = try container.decodeIfPresent(String.self, forKey: .currency)
 		descriptionPart1 = try container.decodeIfPresent(String.self, forKey: .descriptionPart1)
