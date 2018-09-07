@@ -28,7 +28,8 @@ class ViewController: NSViewController {
 	}
 
 	func playFirstSong(_ dataBlob: DataBlob) {
-		guard let url = dataBlob.tracks?.first?.audioFile?.highestQuality else { return }
+		guard let tracks = dataBlob.tracks?.filter({ $0.audioFile != nil }) else { return }
+		guard let url = tracks.first?.audioFile?.highestQuality else { return }
 		let song = AVPlayerItem(url: url)
 		playerView.player = AVPlayer(playerItem: song)
 		playerView.player?.play()

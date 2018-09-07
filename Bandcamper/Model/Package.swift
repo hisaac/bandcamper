@@ -34,7 +34,7 @@ struct Package: Decodable {
 	private(set) var gridIndex: Int?
 	private(set) var id: Int?
 	private(set) var isPrivate: Bool?
-	private(set) var isSetPrice: Bool?
+	private(set) var isSetPrice: Int?
 	private(set) var label: String?
 	private(set) var newDate: Date?
 	private(set) var newDescriptionFormat: Int?
@@ -148,7 +148,7 @@ struct Package: Decodable {
 		gridIndex = try container.decodeIfPresent(Int.self, forKey: .gridIndex)
 		id = try container.decodeIfPresent(Int.self, forKey: .id)
 		isPrivate = try container.decodeIfPresent(Bool.self, forKey: .isPrivate)
-		isSetPrice = try container.decodeIfPresent(Bool.self, forKey: .isSetPrice)
+		isSetPrice = try container.decodeIfPresent(Int.self, forKey: .isSetPrice)
 		label = try container.decodeIfPresent(String.self, forKey: .label)
 		newDate = try container.decodeIfPresent(Date.self, forKey: .newDate)
 		newDescriptionFormat = try container.decodeIfPresent(Int.self, forKey: .newDescriptionFormat)
