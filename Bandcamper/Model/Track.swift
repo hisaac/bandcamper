@@ -35,7 +35,7 @@ struct Track: Decodable {
 	let videoSourceID: String?
 	let videoSourceType: String?
 
-	enum CodingKeys: String, CodingKey {
+	private enum CodingKeys: String, CodingKey {
 		case albumPreorder = "album_preorder"
 		case altLink = "alt_link"
 		case audioFile = "file"

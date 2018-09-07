@@ -4,36 +4,36 @@ import Foundation
 
 struct Album: Decodable {
 
-	private(set) var about: String?
-	private(set) var artID: Int?
-	private(set) var artist: String?
-	private(set) var audit: Int?
-	private(set) var autoRepriced: Bool?
-	private(set) var bandID: Int?
-	private(set) var credits: String?
-	private(set) var downloadDescriptionID: Int?
-	private(set) var downloadPref: Int?
-	private(set) var featuredTrackID: Int?
-	private(set) var id: Int?
-	private(set) var isPrivate: Bool?
-	private(set) var isSetPrice: Bool?
-	private(set) var killed: Bool?
-	private(set) var minimumPrice: Decimal?
-	private(set) var minimumPriceNonzero: Decimal?
-	private(set) var modDate: Date?
-	private(set) var newDate: Date?
-	private(set) var newDescriptionFormat: Int?
-	private(set) var publishDate: Date?
-	private(set) var purchaseTitle: String?
-	private(set) var purchaseURL: URL?
-	private(set) var releaseDate: Date?
-	private(set) var requireEmail: Bool?
-	private(set) var requireEmail0: Bool? // If user sets price to zero, then email is required
-	private(set) var sellingBandID: Int?
-	private(set) var setPrice: Decimal?
-	private(set) var title: String?
-	private(set) var type: String?
-	private(set) var upc: String?
+	let about: String?
+	let artID: Int?
+	let artist: String?
+	let audit: Int?
+	let autoRepriced: Bool?
+	let bandID: Int?
+	let credits: String?
+	let downloadDescriptionID: Int?
+	let downloadPref: Int?
+	let featuredTrackID: Int?
+	let id: Int?
+	let isPrivate: Bool?
+	let isSetPrice: Bool?
+	let killed: Bool?
+	let minimumPrice: Decimal?
+	let minimumPriceNonzero: Decimal?
+	let modDate: Date?
+	let newDate: Date?
+	let newDescriptionFormat: Int?
+	let publishDate: Date?
+	let purchaseTitle: String?
+	let purchaseURL: URL?
+	let releaseDate: Date?
+	let requireEmail: Bool?
+	let requireEmail0: Bool?
+	let sellingBandID: Int?
+	let setPrice: Decimal?
+	let title: String?
+	let type: String?
+	let upc: String?
 
 	private enum CodingKeys: String, CodingKey {
 		case about

@@ -10,7 +10,7 @@ struct Origin: Decodable {
 	let quantityAvailable: Int?
 	let quantitySold: Int?
 
-	enum CodingKeys: String, CodingKey {
+	private enum CodingKeys: String, CodingKey {
 		case id
 		case optionID = "option_id"
 		case packageID = "package_id"

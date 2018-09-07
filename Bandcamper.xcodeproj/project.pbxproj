@@ -102,9 +102,9 @@
 		4A6BD5A721187B0700D35FC2 = {
 			isa = PBXGroup;
 			children = (
-				4A178A4F2118EFC2004ED71A /* Bandcamper.playground */,
 				4A49E0D72118E4E1002347F3 /* README.md */,
 				4A49E0D52118E4E1002347F3 /* changelog.md */,
+				4A178A4F2118EFC2004ED71A /* Bandcamper.playground */,
 				4A6BD5B221187B0700D35FC2 /* Bandcamper */,
 				4A6BD5B121187B0700D35FC2 /* Products */,
 				4A49E0E12118E61C002347F3 /* Frameworks */,
@@ -156,8 +156,8 @@
 				4A36181A2124D9EB00489D1B /* Art.swift */,
 				4A3618182124D9D700489D1B /* Origin.swift */,
 				4A5B96392124D239003699A8 /* Package.swift */,
-				4AA184DE2121C6CC00F05559 /* DataBlob.swift */,
 				4A96E5DC211F941900B864E7 /* Album.swift */,
+				4AA184DE2121C6CC00F05559 /* DataBlob.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

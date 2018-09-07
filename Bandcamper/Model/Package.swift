@@ -58,7 +58,7 @@ struct Package: Decodable {
 	let typeName: String?
 	let url: URL?
 
-	enum CodingKeys: String, CodingKey {
+	private enum CodingKeys: String, CodingKey {
 		case albumArt = "album_art"
 		case albumArtID = "album_art_id"
 		case albumArtist = "album_artist"

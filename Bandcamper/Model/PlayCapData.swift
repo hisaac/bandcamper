@@ -4,7 +4,7 @@ struct PlayCapData: Codable {
 	let streamingLimit: Int?
 	let streamingLimitsEnabled: Bool?
 
-	enum CodingKeys: String, CodingKey {
+	private enum CodingKeys: String, CodingKey {
 		case streamingLimit = "streaming_limit"
 		case streamingLimitsEnabled = "streaming_limits_enabled"
 	}

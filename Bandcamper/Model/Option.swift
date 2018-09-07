@@ -12,7 +12,7 @@ struct Option: Decodable {
 	let sku: String?
 	let title: String?
 
-	enum CodingKeys: String, CodingKey {
+	private enum CodingKeys: String, CodingKey {
 		case id
 		case index
 		case origins

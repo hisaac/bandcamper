@@ -4,7 +4,7 @@ struct TralbumCollectInfo: Codable {
 	let showCollect: Bool?
 	let showWishlistTooltip: Bool?
 
-	enum CodingKeys: String, CodingKey {
+	private enum CodingKeys: String, CodingKey {
 		case showCollect = "show_collect"
 		case showWishlistTooltip = "show_wishlist_tooltip"
 	}

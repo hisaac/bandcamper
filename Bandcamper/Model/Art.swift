@@ -10,7 +10,7 @@ struct Art: Decodable {
 	let index: Int?
 	let width: Int?
 
-	enum CodingKeys: String, CodingKey {
+	private enum CodingKeys: String, CodingKey {
 		case fileName = "file_name"
 		case height
 		case id
