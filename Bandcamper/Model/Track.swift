@@ -3,50 +3,46 @@
 import Foundation
 
 struct Track: Decodable {
+	let albumPreorder: Bool?
+	let altLink: String?
+	let audioFile: AudioFile?
+	let duration: Double?
+	let encodingError: Bool?
+	let encodingPending: Bool?
+	let encodingsID: Int?
+	let freeAlbumDownload: Bool?
+	let hasFreeDownload: Bool?
+	let hasInfo: Bool?
+	let hasLyrics: Bool?
+	let isCapped: Bool?
+	let isDownloadable: Bool?
+	let isDraft, unreleasedTrack: Bool?
+	let isPrivate: Bool?
+	let licenseType: Int?
+	let lyrics: String?
+	let sizeOfLyrics: Int?
+	let streaming: Int?
+	let title: String?
+	let titleLink: String?
+	let trackID, id, playCount: Int?
+	let trackLicenseID: Int?
+	let trackNumber: Int?
+	let videoCaption: Bool?
+	let videoFeatured: Int?
+	let videoID: Int?
+	let videoMobileURL: URL?
+	let videoPosterURL: URL?
+	let videoSourceID: String?
+	let videoSourceType: String?
 
-	private(set) var albumPreorder: Bool?
-	private(set) var altLink: String?
-	private(set) var duration: TimeInterval?
-	private(set) var encodingError: Bool?
-	private(set) var encodingPending: Bool?
-	private(set) var encodingsID: Int?
-	private(set) var audioFile: AudioFile?
-	private(set) var freeAlbumDownload: Bool?
-	private(set) var hasFreeDownload: Bool?
-	private(set) var hasInfo: Bool?
-	private(set) var hasLyrics: Bool?
-	private(set) var id: Int?
-	private(set) var isCapped: Bool?
-	private(set) var isDownloadable: Bool?
-	private(set) var isDraft: Bool?
-	private(set) var isPrivate: Bool?
-	private(set) var licenseType: Int?
-	private(set) var lyrics: String?
-	private(set) var playCount: Int?
-	private(set) var sizeOfLyrics: Int?
-	private(set) var streaming: Int?
-	private(set) var titleLink: String?
-	private(set) var title: String?
-	private(set) var trackID: Int?
-	private(set) var trackLicenseID: Int?
-	private(set) var trackNumber: Int?
-	private(set) var unreleasedTrack: Bool?
-	private(set) var videoCaption: Bool?
-	private(set) var videoFeatured: Int?
-	private(set) var videoID: Int?
-	private(set) var videoMobileURL: URL?
-	private(set) var videoPosterURL: URL?
-	private(set) var videoSourceID: String?
-	private(set) var videoSourceType: String?
-
-	private enum CodingKeys: String, CodingKey {
+	enum CodingKeys: String, CodingKey {
 		case albumPreorder = "album_preorder"
 		case altLink = "alt_link"
+		case audioFile = "file"
 		case duration
 		case encodingError = "encoding_error"
 		case encodingPending = "encoding_pending"
 		case encodingsID = "encodings_id"
-		case audioFile = "file"
 		case freeAlbumDownload = "free_album_download"
 		case hasFreeDownload = "has_free_download"
 		case hasInfo = "has_info"
@@ -61,8 +57,8 @@ struct Track: Decodable {
 		case playCount = "play_count"
 		case sizeOfLyrics = "sizeof_lyrics"
 		case streaming
-		case titleLink = "title_link"
 		case title
+		case titleLink = "title_link"
 		case trackID = "track_id"
 		case trackLicenseID = "track_license_id"
 		case trackNumber = "track_num"
@@ -81,11 +77,11 @@ struct Track: Decodable {
 
 		albumPreorder = try container.decodeIfPresent(Bool.self, forKey: .albumPreorder)
 		altLink = try container.decodeIfPresent(String.self, forKey: .altLink)
+		audioFile = try container.decodeIfPresent(AudioFile.self, forKey: .audioFile)
 		duration = try container.decodeIfPresent(TimeInterval.self, forKey: .duration)
 		encodingError = try container.decodeIfPresent(Bool.self, forKey: .encodingError)
 		encodingPending = try container.decodeIfPresent(Bool.self, forKey: .encodingPending)
 		encodingsID = try container.decodeIfPresent(Int.self, forKey: .encodingsID)
-		audioFile = try container.decodeIfPresent(AudioFile.self, forKey: .audioFile)
 		freeAlbumDownload = try container.decodeIfPresent(Bool.self, forKey: .freeAlbumDownload)
 		hasFreeDownload = try container.decodeIfPresent(Bool.self, forKey: .hasFreeDownload)
 		hasInfo = try container.decodeIfPresent(Bool.self, forKey: .hasInfo)
@@ -100,8 +96,8 @@ struct Track: Decodable {
 		playCount = try container.decodeIfPresent(Int.self, forKey: .playCount)
 		sizeOfLyrics = try container.decodeIfPresent(Int.self, forKey: .sizeOfLyrics)
 		streaming = try container.decodeIfPresent(Int.self, forKey: .streaming)
-		titleLink = try container.decodeIfPresent(String.self, forKey: .titleLink)
 		title = try container.decodeIfPresent(String.self, forKey: .title)
+		titleLink = try container.decodeIfPresent(String.self, forKey: .titleLink)
 		trackID = try container.decodeIfPresent(Int.self, forKey: .trackID)
 		trackLicenseID = try container.decodeIfPresent(Int.self, forKey: .trackLicenseID)
 		trackNumber = try container.decodeIfPresent(Int.self, forKey: .trackNumber)
@@ -152,6 +148,6 @@ struct Track: Decodable {
 	"video_mobile_url": null,
 	"video_poster_url": null,
 	"video_source_id": null,
-	"video_source_type": null,
+	"video_source_type": null
 }
 */

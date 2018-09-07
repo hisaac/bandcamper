@@ -3,8 +3,8 @@
 import Foundation
 
 struct AudioFile: Decodable {
-	private(set) var mp3_128: URL
-	private(set) var mp3_v0: URL?
+	let mp3_128: URL
+	let mp3_v0: URL?
 
 	var highestQuality: URL {
 		return mp3_v0 ?? mp3_128
@@ -13,6 +13,13 @@ struct AudioFile: Decodable {
 	private enum CodingKeys: String, CodingKey {
 		case mp3_128 = "mp3-128"
 		case mp3_v0 = "mp3-v0"
+	}
+
+	init(from decoder: Decoder) throws {
+		let container = try decoder.container(keyedBy: CodingKeys.self)
+
+		mp3_128 = try container.decode(URL.self, forKey: .mp3_128)
+		mp3_v0 = try container.decodeIfPresent(URL.self, forKey: .mp3_v0)
 	}
 }
 
