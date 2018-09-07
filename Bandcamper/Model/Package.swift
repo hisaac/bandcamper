@@ -39,7 +39,7 @@ struct Package: Decodable {
 	private(set) var newDate: Date?
 	private(set) var newDescriptionFormat: Int?
 	private(set) var optionsTitle: String?
-	private(set) var options: String?
+	private(set) var options: [Option]?
 	private(set) var origins: [Origin]?
 	private(set) var price: Decimal?
 	private(set) var quantityAvailable: Int?
@@ -153,7 +153,7 @@ struct Package: Decodable {
 		newDate = try container.decodeIfPresent(Date.self, forKey: .newDate)
 		newDescriptionFormat = try container.decodeIfPresent(Int.self, forKey: .newDescriptionFormat)
 		optionsTitle = try container.decodeIfPresent(String.self, forKey: .optionsTitle)
-		options = try container.decodeIfPresent(String.self, forKey: .options)
+		options = try container.decodeIfPresent([Option].self, forKey: .options)
 		origins = try container.decodeIfPresent([Origin].self, forKey: .origins)
 		price = try container.decodeIfPresent(Decimal.self, forKey: .price)
 		quantityAvailable = try container.decodeIfPresent(Int.self, forKey: .quantityAvailable)

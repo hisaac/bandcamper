@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A21905C2143048700DD11F5 /* JSONNull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21905B2143048700DD11F5 /* JSONNull.swift */; };
+		4A21905E21430C8100DD11F5 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21905D21430C8100DD11F5 /* Option.swift */; };
 		4A3618192124D9D700489D1B /* Origin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3618182124D9D700489D1B /* Origin.swift */; };
 		4A36181B2124D9EB00489D1B /* Art.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A36181A2124D9EB00489D1B /* Art.swift */; };
 		4A49E0D82118E4E1002347F3 /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D22118E4E1002347F3 /* Cartfile.private */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		4A178A4F2118EFC2004ED71A /* Bandcamper.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Bandcamper.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4A21905B2143048700DD11F5 /* JSONNull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONNull.swift; sourceTree = "<group>"; };
+		4A21905D21430C8100DD11F5 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		4A3618182124D9D700489D1B /* Origin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Origin.swift; sourceTree = "<group>"; };
 		4A36181A2124D9EB00489D1B /* Art.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Art.swift; sourceTree = "<group>"; };
 		4A49E0D22118E4E1002347F3 /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		4ABA9AEB214302EB00EF5238 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4A21905D21430C8100DD11F5 /* Option.swift */,
 				4AA184DE2121C6CC00F05559 /* DataBlob.swift */,
 				4A96E5DC211F941900B864E7 /* Album.swift */,
 				4A4C1DDA211F9EAE0098FBD3 /* Track.swift */,
@@ -317,6 +320,7 @@
 				4A6BD5B621187B0800D35FC2 /* ViewController.swift in Sources */,
 				4A5B96352124BC4E003699A8 /* PlayCapData.swift in Sources */,
 				4A5B96372124BC4E003699A8 /* Album.swift in Sources */,
+				4A21905E21430C8100DD11F5 /* Option.swift in Sources */,
 				4A5B96382124BC4E003699A8 /* TralbumCollectInfo.swift in Sources */,
 				4A5B96322124BC4E003699A8 /* DataBlob.swift in Sources */,
 				4A36181B2124D9EB00489D1B /* Art.swift in Sources */,
