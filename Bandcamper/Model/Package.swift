@@ -4,63 +4,63 @@ import Foundation
 
 struct Package: Decodable {
 
-	private(set) var albumArtID: Int?
-	private(set) var albumArt: String?
-	private(set) var albumArtist: String?
-	private(set) var albumID: Int?
-	private(set) var albumPrivate: Bool?
-	private(set) var albumPublishDate: Date?
-	private(set) var albumReleaseDate: Date?
-	private(set) var albumTitle: String?
-	private(set) var arts: [Art]?
-	private(set) var associatedLicenseID: Int?
-	private(set) var bandID: Int?
-	private(set) var certifiedSeller: Int?
-	private(set) var country: String?
-	private(set) var currency: String?
-	private(set) var descriptionPart1: String?
-	private(set) var descriptionPart2: String?
-	private(set) var description: String?
-	private(set) var downloadArtID: Int?
-	private(set) var downloadArtist: String?
-	private(set) var downloadHasAudio: Bool?
-	private(set) var downloadID: Int?
-	private(set) var downloadTitle: String?
-	private(set) var downloadType: String?
-	private(set) var downloadURL: URL?
-	private(set) var editionSize: Int?
-	private(set) var featuredDate: Date?
-	private(set) var fulfillmentDays: Int?
-	private(set) var gridIndex: Int?
-	private(set) var id: Int?
-	private(set) var isPrivate: Bool?
-	private(set) var isSetPrice: Int?
-	private(set) var label: String?
-	private(set) var newDate: Date?
-	private(set) var newDescriptionFormat: Int?
-	private(set) var optionsTitle: String?
-	private(set) var options: [Option]?
-	private(set) var origins: [Origin]?
-	private(set) var price: Decimal?
-	private(set) var quantityAvailable: Int?
-	private(set) var quantityLimits: Int?
-	private(set) var quantitySold: Int?
-	private(set) var quantityWarning: Bool?
-	private(set) var releaseDate: Date?
-	private(set) var sellingBandID: Int?
-	private(set) var shippingExceptionMode: String?
-	private(set) var sku: String?
-	private(set) var subscriberOnlyPublished: Bool?
-	private(set) var subscriberOnly: Bool?
-	private(set) var taxRate: Double?
-	private(set) var title: String?
-	private(set) var typeID: Int?
-	private(set) var typeName: String?
-	private(set) var url: URL?
+	let albumArt: String?
+	let albumArtID: Int?
+	let albumArtist: String?
+	let albumID: Int?
+	let albumPrivate: Bool?
+	let albumPublishDate: Date?
+	let albumReleaseDate: Date?
+	let albumTitle: String?
+	let arts: [Art]?
+	let associatedLicenseID: Int?
+	let bandID: Int?
+	let certifiedSeller: Int?
+	let country: String?
+	let currency: String?
+	let descriptionPart1: String?
+	let descriptionPart2: String?
+	let description: String?
+	let downloadArtID: Int?
+	let downloadArtist: String?
+	let downloadHasAudio: Bool?
+	let downloadID: Int?
+	let downloadTitle: String?
+	let downloadType: String?
+	let downloadURL: URL?
+	let editionSize: Int?
+	let featuredDate: Date?
+	let fulfillmentDays: Int?
+	let gridIndex: Int?
+	let id: Int?
+	let isSetPrice: Int?
+	let label: String?
+	let newDate: Date?
+	let newDescriptionFormat: Int?
+	let options: [Option]?
+	let optionsTitle: String?
+	let origins: [Origin]?
+	let isPrivate: Bool?
+	let price: Decimal?
+	let quantityAvailable: Int?
+	let quantityLimits: Int?
+	let quantitySold: Int?
+	let quantityWarning: Bool?
+	let releaseDate: Date?
+	let sellingBandID: Int?
+	let shippingExceptionMode: String?
+	let sku: String?
+	let subscriberOnly: Bool?
+	let subscriberOnlyPublished: Bool?
+	let taxRate: Double?
+	let title: String?
+	let typeID: Int?
+	let typeName: String?
+	let url: URL?
 
-	private enum CodingKeys: String, CodingKey {
-		case albumArtID = "album_art_id"
+	enum CodingKeys: String, CodingKey {
 		case albumArt = "album_art"
+		case albumArtID = "album_art_id"
 		case albumArtist = "album_artist"
 		case albumID = "album_id"
 		case albumPrivate = "album_private"
@@ -88,14 +88,14 @@ struct Package: Decodable {
 		case fulfillmentDays = "fulfillment_days"
 		case gridIndex = "grid_index"
 		case id
-		case isPrivate = "private"
 		case isSetPrice = "is_set_price"
 		case label
 		case newDate = "new_date"
 		case newDescriptionFormat = "new_desc_format"
-		case optionsTitle = "options_title"
 		case options
+		case optionsTitle = "options_title"
 		case origins
+		case isPrivate = "private"
 		case price
 		case quantityAvailable = "quantity_available"
 		case quantityLimits = "quantity_limits"
@@ -105,8 +105,8 @@ struct Package: Decodable {
 		case sellingBandID = "selling_band_id"
 		case shippingExceptionMode = "shipping_exception_mode"
 		case sku
-		case subscriberOnlyPublished = "subscriber_only_published"
 		case subscriberOnly = "subscriber_only"
+		case subscriberOnlyPublished = "subscriber_only_published"
 		case taxRate = "tax_rate"
 		case title
 		case typeID = "type_id"
@@ -118,8 +118,8 @@ struct Package: Decodable {
 	init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 
-		albumArtID = try container.decodeIfPresent(Int.self, forKey: .albumArtID)
 		albumArt = try container.decodeIfPresent(String.self, forKey: .albumArt)
+		albumArtID = try container.decodeIfPresent(Int.self, forKey: .albumArtID)
 		albumArtist = try container.decodeIfPresent(String.self, forKey: .albumArtist)
 		albumID = try container.decodeIfPresent(Int.self, forKey: .albumID)
 		albumPrivate = try container.decodeIfPresent(Bool.self, forKey: .albumPrivate)
@@ -132,9 +132,9 @@ struct Package: Decodable {
 		certifiedSeller = try container.decodeIfPresent(Int.self, forKey: .certifiedSeller)
 		country = try container.decodeIfPresent(String.self, forKey: .country)
 		currency = try container.decodeIfPresent(String.self, forKey: .currency)
+		description = try container.decodeIfPresent(String.self, forKey: .description)
 		descriptionPart1 = try container.decodeIfPresent(String.self, forKey: .descriptionPart1)
 		descriptionPart2 = try container.decodeIfPresent(String.self, forKey: .descriptionPart2)
-		description = try container.decodeIfPresent(String.self, forKey: .description)
 		downloadArtID = try container.decodeIfPresent(Int.self, forKey: .downloadArtID)
 		downloadArtist = try container.decodeIfPresent(String.self, forKey: .downloadArtist)
 		downloadHasAudio = try container.decodeIfPresent(Bool.self, forKey: .downloadHasAudio)
@@ -152,8 +152,8 @@ struct Package: Decodable {
 		label = try container.decodeIfPresent(String.self, forKey: .label)
 		newDate = try container.decodeIfPresent(Date.self, forKey: .newDate)
 		newDescriptionFormat = try container.decodeIfPresent(Int.self, forKey: .newDescriptionFormat)
-		optionsTitle = try container.decodeIfPresent(String.self, forKey: .optionsTitle)
 		options = try container.decodeIfPresent([Option].self, forKey: .options)
+		optionsTitle = try container.decodeIfPresent(String.self, forKey: .optionsTitle)
 		origins = try container.decodeIfPresent([Origin].self, forKey: .origins)
 		price = try container.decodeIfPresent(Decimal.self, forKey: .price)
 		quantityAvailable = try container.decodeIfPresent(Int.self, forKey: .quantityAvailable)
@@ -164,8 +164,8 @@ struct Package: Decodable {
 		sellingBandID = try container.decodeIfPresent(Int.self, forKey: .sellingBandID)
 		shippingExceptionMode = try container.decodeIfPresent(String.self, forKey: .shippingExceptionMode)
 		sku = try container.decodeIfPresent(String.self, forKey: .sku)
-		subscriberOnlyPublished = try container.decodeIfPresent(Bool.self, forKey: .subscriberOnlyPublished)
 		subscriberOnly = try container.decodeIfPresent(Bool.self, forKey: .subscriberOnly)
+		subscriberOnlyPublished = try container.decodeIfPresent(Bool.self, forKey: .subscriberOnlyPublished)
 		taxRate = try container.decodeIfPresent(Double.self, forKey: .taxRate)
 		title = try container.decodeIfPresent(String.self, forKey: .title)
 		typeID = try container.decodeIfPresent(Int.self, forKey: .typeID)
