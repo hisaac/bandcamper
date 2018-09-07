@@ -1,10 +1,10 @@
 // Created by Isaac Halvorson on 8/15/18
 
-struct PlayCapData: Decodable {
-	private(set) var streamingLimit: Int?
-	private(set) var streamingLimitsEnabled: Bool?
+struct PlayCapData: Codable {
+	let streamingLimit: Int
+	let streamingLimitsEnabled: Bool
 
-	private enum CodingKeys: String, CodingKey {
+	enum CodingKeys: String, CodingKey {
 		case streamingLimit = "streaming_limit"
 		case streamingLimitsEnabled = "streaming_limits_enabled"
 	}

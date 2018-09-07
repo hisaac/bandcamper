@@ -28,6 +28,7 @@
 		4A6BD5B621187B0800D35FC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B521187B0800D35FC2 /* ViewController.swift */; };
 		4A6BD5B821187B0800D35FC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B721187B0800D35FC2 /* Assets.xcassets */; };
 		4A6BD5BB21187B0800D35FC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B921187B0800D35FC2 /* Main.storyboard */; };
+		4ABA9AF22143032500EF5238 /* dataBlob.json in Resources */ = {isa = PBXBuildFile; fileRef = 4ABA9AF12143032500EF5238 /* dataBlob.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,6 +70,7 @@
 		4A6BD5D521187BDB00D35FC2 /* BandcampService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandcampService.swift; sourceTree = "<group>"; };
 		4A96E5DC211F941900B864E7 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		4AA184DE2121C6CC00F05559 /* DataBlob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBlob.swift; sourceTree = "<group>"; };
+		4ABA9AF12143032500EF5238 /* dataBlob.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dataBlob.json; sourceTree = "<group>"; };
 		4AEF5C7C21245B3900D05EED /* AudioFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFile.swift; sourceTree = "<group>"; };
 		4AEF5C7E21245B9200D05EED /* PlayCapData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCapData.swift; sourceTree = "<group>"; };
 		4AEF5C8021245BA800D05EED /* TralbumCollectInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TralbumCollectInfo.swift; sourceTree = "<group>"; };
@@ -85,15 +87,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4A49E0DE2118E5D3002347F3 /* TestData */ = {
-			isa = PBXGroup;
-			children = (
-				4A49E0DF2118E5D3002347F3 /* dobie.html */,
-				4A49E0E02118E5D3002347F3 /* TralbumData.js */,
-			);
-			path = TestData;
-			sourceTree = "<group>";
-		};
 		4A49E0E12118E61C002347F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,14 +101,13 @@
 				4A178A4F2118EFC2004ED71A /* Bandcamper.playground */,
 				4A49E0D72118E4E1002347F3 /* readme.md */,
 				4A49E0D52118E4E1002347F3 /* changelog.md */,
-				4A49E0D42118E4E1002347F3 /* Cartfile */,
-				4A49E0D22118E4E1002347F3 /* Cartfile.private */,
-				4A49E0D62118E4E1002347F3 /* .gitignore */,
-				4A49E0D32118E4E1002347F3 /* .swiftlint.yml */,
 				4A6BD5B221187B0700D35FC2 /* Bandcamper */,
-				4A49E0DE2118E5D3002347F3 /* TestData */,
 				4A6BD5B121187B0700D35FC2 /* Products */,
 				4A49E0E12118E61C002347F3 /* Frameworks */,
+				4A49E0D42118E4E1002347F3 /* Cartfile */,
+				4A49E0D22118E4E1002347F3 /* Cartfile.private */,
+				4A49E0D32118E4E1002347F3 /* .swiftlint.yml */,
+				4A49E0D62118E4E1002347F3 /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,25 +122,84 @@
 		4A6BD5B221187B0700D35FC2 /* Bandcamper */ = {
 			isa = PBXGroup;
 			children = (
+				4A6BD5B321187B0800D35FC2 /* AppDelegate.swift */,
+				4ABA9AF32143034200EF5238 /* View */,
+				4ABA9AEC214302F100EF5238 /* Utilities */,
+				4ABA9AEB214302EB00EF5238 /* Model */,
+				4ABA9AEA214302E500EF5238 /* Service */,
+				4ABA9AEF2143031800EF5238 /* Resources */,
+				4ABA9AED214302F700EF5238 /* Supporting Files */,
+			);
+			path = Bandcamper;
+			sourceTree = "<group>";
+		};
+		4ABA9AEA214302E500EF5238 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4A6BD5D521187BDB00D35FC2 /* BandcampService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4ABA9AEB214302EB00EF5238 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				4A5B96392124D239003699A8 /* Package.swift */,
 				4A3618182124D9D700489D1B /* Origin.swift */,
 				4A36181A2124D9EB00489D1B /* Art.swift */,
-				4A6BD5B321187B0800D35FC2 /* AppDelegate.swift */,
-				4A6BD5B521187B0800D35FC2 /* ViewController.swift */,
-				4A6BD5B721187B0800D35FC2 /* Assets.xcassets */,
-				4A6BD5B921187B0800D35FC2 /* Main.storyboard */,
-				4A6BD5BC21187B0800D35FC2 /* Info.plist */,
-				4A6BD5BD21187B0800D35FC2 /* Bandcamper.entitlements */,
-				4A5F94FA2124AC930018828E /* BandcampDateFormatter.swift */,
 				4AEF5C7E21245B9200D05EED /* PlayCapData.swift */,
 				4AEF5C8021245BA800D05EED /* TralbumCollectInfo.swift */,
 				4AEF5C7C21245B3900D05EED /* AudioFile.swift */,
-				4A6BD5D521187BDB00D35FC2 /* BandcampService.swift */,
 				4A96E5DC211F941900B864E7 /* Album.swift */,
 				4A4C1DDA211F9EAE0098FBD3 /* Track.swift */,
 				4AA184DE2121C6CC00F05559 /* DataBlob.swift */,
 			);
-			path = Bandcamper;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4ABA9AEC214302F100EF5238 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4A5F94FA2124AC930018828E /* BandcampDateFormatter.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4ABA9AED214302F700EF5238 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4A6BD5B721187B0800D35FC2 /* Assets.xcassets */,
+				4A6BD5BC21187B0800D35FC2 /* Info.plist */,
+				4A6BD5BD21187B0800D35FC2 /* Bandcamper.entitlements */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4ABA9AEF2143031800EF5238 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4ABA9AF02143031800EF5238 /* TestData */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4ABA9AF02143031800EF5238 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				4ABA9AF12143032500EF5238 /* dataBlob.json */,
+				4A49E0DF2118E5D3002347F3 /* dobie.html */,
+				4A49E0E02118E5D3002347F3 /* TralbumData.js */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
+		4ABA9AF32143034200EF5238 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A6BD5B521187B0800D35FC2 /* ViewController.swift */,
+				4A6BD5B921187B0800D35FC2 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +275,7 @@
 				4A49E0D82118E4E1002347F3 /* Cartfile.private in Resources */,
 				4A49E0DD2118E4E1002347F3 /* readme.md in Resources */,
 				4A6BD5BB21187B0800D35FC2 /* Main.storyboard in Resources */,
+				4ABA9AF22143032500EF5238 /* dataBlob.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,11 +456,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Bandcamper/Bandcamper.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Bandcamper/Supporting Files/Bandcamper.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = F2J52QJQ9Y;
-				INFOPLIST_FILE = Bandcamper/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Bandcamper/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -423,11 +475,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Bandcamper/Bandcamper.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "Bandcamper/Supporting Files/Bandcamper.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = F2J52QJQ9Y;
-				INFOPLIST_FILE = Bandcamper/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Bandcamper/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
