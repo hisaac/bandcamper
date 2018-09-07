@@ -29,6 +29,8 @@ class BandcampService {
 		guard let range = Range(resultRange, in: html) else { return nil }
 		let tralbumData = String(html[range])
 
+		// FIXME: Sometimes this call to `JSON.stringify()` fails, and I don't know why
+		// example: https://delasoul.bandcamp.com/album/buhloone-mindstate
 		guard let stringifiedJSON = JSContext()?.evaluateScript("JSON.stringify(\(tralbumData))").toString(),
 			let jsonData = stringifiedJSON.data(using: .utf8) else {
 				return nil

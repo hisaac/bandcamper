@@ -16,7 +16,7 @@
 		4A49E0DA2118E4E1002347F3 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D42118E4E1002347F3 /* Cartfile */; };
 		4A49E0DB2118E4E1002347F3 /* changelog.md in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D52118E4E1002347F3 /* changelog.md */; };
 		4A49E0DC2118E4E1002347F3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D62118E4E1002347F3 /* .gitignore */; };
-		4A49E0DD2118E4E1002347F3 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D72118E4E1002347F3 /* readme.md */; };
+		4A49E0DD2118E4E1002347F3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D72118E4E1002347F3 /* README.md */; };
 		4A5B96312124BC4E003699A8 /* BandcampService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5D521187BDB00D35FC2 /* BandcampService.swift */; };
 		4A5B96322124BC4E003699A8 /* DataBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA184DE2121C6CC00F05559 /* DataBlob.swift */; };
 		4A5B96332124BC4E003699A8 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4C1DDA211F9EAE0098FBD3 /* Track.swift */; };
@@ -57,7 +57,7 @@
 		4A49E0D42118E4E1002347F3 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		4A49E0D52118E4E1002347F3 /* changelog.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = changelog.md; sourceTree = "<group>"; };
 		4A49E0D62118E4E1002347F3 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		4A49E0D72118E4E1002347F3 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		4A49E0D72118E4E1002347F3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4A49E0DF2118E5D3002347F3 /* dobie.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = dobie.html; sourceTree = "<group>"; };
 		4A49E0E02118E5D3002347F3 /* TralbumData.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = TralbumData.js; sourceTree = "<group>"; };
 		4A49E0E22118E61D002347F3 /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/Mac/SwiftSoup.framework; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				4A178A4F2118EFC2004ED71A /* Bandcamper.playground */,
-				4A49E0D72118E4E1002347F3 /* readme.md */,
+				4A49E0D72118E4E1002347F3 /* README.md */,
 				4A49E0D52118E4E1002347F3 /* changelog.md */,
 				4A6BD5B221187B0700D35FC2 /* Bandcamper */,
 				4A6BD5B121187B0700D35FC2 /* Products */,
@@ -279,7 +279,7 @@
 				4A6BD5B821187B0800D35FC2 /* Assets.xcassets in Resources */,
 				4A49E0DB2118E4E1002347F3 /* changelog.md in Resources */,
 				4A49E0D82118E4E1002347F3 /* Cartfile.private in Resources */,
-				4A49E0DD2118E4E1002347F3 /* readme.md in Resources */,
+				4A49E0DD2118E4E1002347F3 /* README.md in Resources */,
 				4A6BD5BB21187B0800D35FC2 /* Main.storyboard in Resources */,
 				4ABA9AF22143032500EF5238 /* dataBlob.json in Resources */,
 			);
