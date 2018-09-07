@@ -4,46 +4,46 @@ import Foundation
 
 struct DataBlob: Decodable {
 
-	private(set) var album: Album?
-	private(set) var albumIsPreorder: Bool?
-	private(set) var albumReleaseDate: Date?
-	private(set) var artID: Int?
-	private(set) var artist: String?
-	private(set) var clientIDSig: String?
-	private(set) var defaultPrice: Decimal? // ?
-	private(set) var featuredTrackID: Int?
-	private(set) var free: Int?
-	private(set) var freeDownloadPage: String? // ?
-	private(set) var hasAudio: Bool?
-	private(set) var hasDiscounts: Bool? // ?
-	private(set) var id: Int?
-	private(set) var initialTrackNum: Int?
-	private(set) var isBandMember: Bool?
-	private(set) var isBonus: Bool? // ?
-	private(set) var isPreorder: Bool?
-	private(set) var isPrivateStream: Bool?
-	private(set) var isPurchased: Bool?
-	private(set) var itemsPurchased: Int? // ?
-	private(set) var itemType: String?
-	private(set) var lastSubscriptionItem: Int? // ?
-	private(set) var licensedVersionIDs: [Int]? // ?
-	private(set) var packageAssociatedLicenseID: Int? // ?
-	private(set) var packages: [Package]? // ?
-	private(set) var paid: Int?
-	private(set) var playCapData: PlayCapData?
-	private(set) var playingFrom: String?
-	private(set) var preorderCount: Int?
-	private(set) var tracks: [Track]?
-	private(set) var tralbumCollectInfo: TralbumCollectInfo?
-	private(set) var url: URL?
+	let albumIsPreorder: Bool?
+	let albumReleaseDate: Date?
+	let artID: Int?
+	let artist: String?
+	let clientIDSig: String?
+	let album: Album?
+	let defaultPrice: Decimal?
+	let featuredTrackID: Int?
+	let free: Int?
+	let freeDownloadPage: String?
+	let hasAudio: Bool?
+	let hasDiscounts: Bool?
+	let id: Int?
+	let initialTrackNum: Int?
+	let isBandMember: Bool?
+	let isBonus: Bool?
+	let isPreorder: Bool?
+	let isPrivateStream: Bool?
+	let isPurchased: Bool?
+	let itemsPurchased: Int?
+	let itemType: String?
+	let lastSubscriptionItem: Int?
+	let licensedVersionIDs: [Int]?
+	let packageAssociatedLicenseID: Int?
+	let packages: [Package]?
+	let paid: Int?
+	let playCapData: PlayCapData?
+	let playingFrom: String?
+	let preorderCount: Int?
+	let tracks: [Track]?
+	let tralbumCollectInfo: TralbumCollectInfo?
+	let url: URL?
 
-	enum CodingKeys: String, CodingKey {
-		case album = "current"
+	private enum CodingKeys: String, CodingKey {
 		case albumIsPreorder = "album_is_preorder"
 		case albumReleaseDate = "album_release_date"
 		case artID = "art_id"
 		case artist
 		case clientIDSig = "client_id_sig"
+		case album = "current"
 		case defaultPrice
 		case featuredTrackID = "featured_track_id"
 		case free = "FREE"
