@@ -144,15 +144,15 @@
 		4ABA9AEB214302EB00EF5238 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4AA184DE2121C6CC00F05559 /* DataBlob.swift */,
+				4A96E5DC211F941900B864E7 /* Album.swift */,
+				4A4C1DDA211F9EAE0098FBD3 /* Track.swift */,
 				4A5B96392124D239003699A8 /* Package.swift */,
 				4A3618182124D9D700489D1B /* Origin.swift */,
 				4A36181A2124D9EB00489D1B /* Art.swift */,
 				4AEF5C7E21245B9200D05EED /* PlayCapData.swift */,
 				4AEF5C8021245BA800D05EED /* TralbumCollectInfo.swift */,
 				4AEF5C7C21245B3900D05EED /* AudioFile.swift */,
-				4A96E5DC211F941900B864E7 /* Album.swift */,
-				4A4C1DDA211F9EAE0098FBD3 /* Track.swift */,
-				4AA184DE2121C6CC00F05559 /* DataBlob.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
