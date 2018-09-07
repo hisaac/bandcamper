@@ -11,9 +11,7 @@
 		4A21905E21430C8100DD11F5 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21905D21430C8100DD11F5 /* Option.swift */; };
 		4A3618192124D9D700489D1B /* Origin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3618182124D9D700489D1B /* Origin.swift */; };
 		4A36181B2124D9EB00489D1B /* Art.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A36181A2124D9EB00489D1B /* Art.swift */; };
-		4A49E0D82118E4E1002347F3 /* Cartfile.private in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D22118E4E1002347F3 /* Cartfile.private */; };
 		4A49E0D92118E4E1002347F3 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D32118E4E1002347F3 /* .swiftlint.yml */; };
-		4A49E0DA2118E4E1002347F3 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D42118E4E1002347F3 /* Cartfile */; };
 		4A49E0DB2118E4E1002347F3 /* changelog.md in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D52118E4E1002347F3 /* changelog.md */; };
 		4A49E0DC2118E4E1002347F3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D62118E4E1002347F3 /* .gitignore */; };
 		4A49E0DD2118E4E1002347F3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D72118E4E1002347F3 /* README.md */; };
@@ -52,9 +50,7 @@
 		4A21905D21430C8100DD11F5 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		4A3618182124D9D700489D1B /* Origin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Origin.swift; sourceTree = "<group>"; };
 		4A36181A2124D9EB00489D1B /* Art.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Art.swift; sourceTree = "<group>"; };
-		4A49E0D22118E4E1002347F3 /* Cartfile.private */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
 		4A49E0D32118E4E1002347F3 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
-		4A49E0D42118E4E1002347F3 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		4A49E0D52118E4E1002347F3 /* changelog.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = changelog.md; sourceTree = "<group>"; };
 		4A49E0D62118E4E1002347F3 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4A49E0D72118E4E1002347F3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -108,8 +104,6 @@
 				4A6BD5B221187B0700D35FC2 /* Bandcamper */,
 				4A6BD5B121187B0700D35FC2 /* Products */,
 				4A49E0E12118E61C002347F3 /* Frameworks */,
-				4A49E0D42118E4E1002347F3 /* Cartfile */,
-				4A49E0D22118E4E1002347F3 /* Cartfile.private */,
 				4A49E0D32118E4E1002347F3 /* .swiftlint.yml */,
 				4A49E0D62118E4E1002347F3 /* .gitignore */,
 			);
@@ -273,12 +267,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A49E0DA2118E4E1002347F3 /* Cartfile in Resources */,
 				4A49E0DC2118E4E1002347F3 /* .gitignore in Resources */,
 				4A49E0D92118E4E1002347F3 /* .swiftlint.yml in Resources */,
 				4A6BD5B821187B0800D35FC2 /* Assets.xcassets in Resources */,
 				4A49E0DB2118E4E1002347F3 /* changelog.md in Resources */,
-				4A49E0D82118E4E1002347F3 /* Cartfile.private in Resources */,
 				4A49E0DD2118E4E1002347F3 /* README.md in Resources */,
 				4A6BD5BB21187B0800D35FC2 /* Main.storyboard in Resources */,
 				4ABA9AF22143032500EF5238 /* dataBlob.json in Resources */,
