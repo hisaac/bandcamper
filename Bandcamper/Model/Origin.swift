@@ -3,23 +3,32 @@
 import Foundation
 
 struct Origin: Decodable {
+	let id: Int?
+	let optionID: Int?
+	let packageID: Int?
+	let quantity: Int?
+	let quantityAvailable: Int?
+	let quantitySold: Int?
 
-	private(set) var id: Int?
-	private(set) var optionID: Int?
-	private(set) var packageID: Int?
-	private(set) var quantityAvailable: Int?
-	private(set) var quantitySold: Int?
-	private(set) var quantity: Int?
-
-	private enum CodingKeys: String, CodingKey {
+	enum CodingKeys: String, CodingKey {
 		case id
 		case optionID = "option_id"
 		case packageID = "package_id"
+		case quantity
 		case quantityAvailable = "quantity_available"
 		case quantitySold = "quantity_sold"
-		case quantity
 	}
 
+	init(from decoder: Decoder) throws {
+		let container = try decoder.container(keyedBy: CodingKeys.self)
+
+		id = try container.decodeIfPresent(Int.self, forKey: .id)
+		optionID = try container.decodeIfPresent(Int.self, forKey: .optionID)
+		packageID = try container.decodeIfPresent(Int.self, forKey: .packageID)
+		quantity = try container.decodeIfPresent(Int.self, forKey: .quantity)
+		quantityAvailable = try container.decodeIfPresent(Int.self, forKey: .quantityAvailable)
+		quantitySold = try container.decodeIfPresent(Int.self, forKey: .quantitySold)
+	}
 }
 
 /**
