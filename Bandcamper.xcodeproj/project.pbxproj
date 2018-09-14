@@ -24,7 +24,7 @@
 		4A68DCBE214C34C30071B2F2 /* AudioPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A68DCBC214C34C30071B2F2 /* AudioPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A68DCC2214C35120071B2F2 /* AudioPlayer.framework.dSYM in [Carthage] Copy dSYMs */ = {isa = PBXBuildFile; fileRef = 4A68DCC1214C35110071B2F2 /* AudioPlayer.framework.dSYM */; };
 		4A6BD5B421187B0800D35FC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B321187B0800D35FC2 /* AppDelegate.swift */; };
-		4A6BD5B621187B0800D35FC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B521187B0800D35FC2 /* ViewController.swift */; };
+		4A6BD5B621187B0800D35FC2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B521187B0800D35FC2 /* MainViewController.swift */; };
 		4A6BD5B821187B0800D35FC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B721187B0800D35FC2 /* Assets.xcassets */; };
 		4A6BD5BB21187B0800D35FC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B921187B0800D35FC2 /* Main.storyboard */; };
 		4ABA9AF22143032500EF5238 /* dataBlob.json in Resources */ = {isa = PBXBuildFile; fileRef = 4ABA9AF12143032500EF5238 /* dataBlob.json */; };
@@ -76,7 +76,7 @@
 		4A68DCC1214C35110071B2F2 /* AudioPlayer.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = AudioPlayer.framework.dSYM; path = Carthage/Build/Mac/AudioPlayer.framework.dSYM; sourceTree = "<group>"; };
 		4A6BD5B021187B0700D35FC2 /* Bandcamper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bandcamper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6BD5B321187B0800D35FC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4A6BD5B521187B0800D35FC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4A6BD5B521187B0800D35FC2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4A6BD5B721187B0800D35FC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A6BD5BA21187B0800D35FC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A6BD5BC21187B0800D35FC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 		4ABA9AF32143034200EF5238 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4A6BD5B521187B0800D35FC2 /* ViewController.swift */,
+				4A6BD5B521187B0800D35FC2 /* MainViewController.swift */,
 				4A6BD5B921187B0800D35FC2 /* Main.storyboard */,
 			);
 			path = View;
@@ -343,7 +343,7 @@
 				4A5B96312124BC4E003699A8 /* BandcampService.swift in Sources */,
 				4A21905C2143048700DD11F5 /* JSONNull.swift in Sources */,
 				4A5B96332124BC4E003699A8 /* Track.swift in Sources */,
-				4A6BD5B621187B0800D35FC2 /* ViewController.swift in Sources */,
+				4A6BD5B621187B0800D35FC2 /* MainViewController.swift in Sources */,
 				4A5B96352124BC4E003699A8 /* PlayCapData.swift in Sources */,
 				4A5B96372124BC4E003699A8 /* Album.swift in Sources */,
 				4A21905E21430C8100DD11F5 /* Option.swift in Sources */,

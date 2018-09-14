@@ -3,16 +3,24 @@
 import AudioPlayer
 import Cocoa
 
-class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
+class MainViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
 
+	// Table View IBOutlets
 	@IBOutlet weak var tableView: NSTableView!
 	@IBOutlet weak var trackNumberColumn: NSTableColumn!
 	@IBOutlet weak var trackNameColumn: NSTableColumn!
 	@IBOutlet weak var artistColumn: NSTableColumn!
 	@IBOutlet weak var durationColumn: NSTableColumn!
 
-	let dobieURL = "https://nonameraps.bandcamp.com/album/telefone"
+	// Play Control IBOutlets
+	@IBOutlet weak var rewindButton: NSButton!
+	@IBOutlet weak var playPauseButton: NSButton!
+	@IBOutlet weak var fastForwardButton: NSButton!
+	@IBOutlet weak var playheadSlider: NSSlider!
+
+	let testURL = "https://nonameraps.bandcamp.com/album/telefone"
 	let bandcampService = BandcampService()
+	let audioPlayer = AudioPlayer()
 
 	var dataBlob: DataBlob? {
 		didSet {
@@ -28,14 +36,27 @@ class ViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSour
 
 		tableView.delegate = self
 		tableView.dataSource = self
+		tableView.doubleAction = #selector(playTrack)
 
 		getDataBlob()
 	}
 
 	func getDataBlob() {
-		bandcampService.getAlbum(at: dobieURL) { data in
+		bandcampService.getAlbum(at: testURL) { data in
 			self.dataBlob = data
 		}
+	}
+
+	@objc func playTrack() {
+		guard let tracks = tracks else { return }
+		let track = tracks[tableView.clickedRow]
+		let audioItem = AudioItem(
+			highQualitySoundURL: nil,
+			mediumQualitySoundURL: track.audioFile?.mp3_v0,
+			lowQualitySoundURL: track.audioFile?.mp3_128
+		)
+
+		audioPlayer.play(item: audioItem!)
 	}
 
 	func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
