@@ -869,10 +869,7 @@
                     <connections>
                         <outlet property="artistColumn" destination="eoh-cI-WVX" id="83l-O5-xVG"/>
                         <outlet property="durationColumn" destination="lIs-Je-FsL" id="cMN-we-cfw"/>
-                        <outlet property="fastForwardButton" destination="gsM-SY-kVk" id="Jik-iA-hJE"/>
-                        <outlet property="playPauseButton" destination="vdd-kw-T4y" id="aQc-Ku-PFa"/>
                         <outlet property="playheadSlider" destination="BFN-yS-1PW" id="JAx-96-qKz"/>
-                        <outlet property="rewindButton" destination="Lk7-Wi-ZpN" id="gcU-bS-b7a"/>
                         <outlet property="tableView" destination="b0O-RN-b97" id="GXM-5J-TUa"/>
                         <outlet property="trackNameColumn" destination="fNR-OA-hRN" id="eIc-5y-vgk"/>
                         <outlet property="trackNumberColumn" destination="AoR-pI-iHa" id="ogr-Z6-7xU"/>

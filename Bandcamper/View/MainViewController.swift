@@ -3,7 +3,7 @@
 import AudioPlayer
 import Cocoa
 
-class MainViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
+class MainViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource, AudioPlayerDelegate {
 
 	// Table View IBOutlets
 	@IBOutlet weak var tableView: NSTableView!
@@ -13,9 +13,6 @@ class MainViewController: NSViewController, NSTableViewDelegate, NSTableViewData
 	@IBOutlet weak var durationColumn: NSTableColumn!
 
 	// Play Control IBOutlets
-	@IBOutlet weak var rewindButton: NSButton!
-	@IBOutlet weak var playPauseButton: NSButton!
-	@IBOutlet weak var fastForwardButton: NSButton!
 	@IBOutlet weak var playheadSlider: NSSlider!
 
 	let testURL = "https://nonameraps.bandcamp.com/album/telefone"
@@ -24,12 +21,25 @@ class MainViewController: NSViewController, NSTableViewDelegate, NSTableViewData
 
 	var dataBlob: DataBlob? {
 		didSet {
-			tracks = dataBlob?.tracks
+			guard let tracks = dataBlob?.tracks else { return }
+			self.tracks = tracks
 			tableView.reloadData()
 		}
 	}
 
-	var tracks: [Track]?
+	var tracks: [Track?] = [] {
+		didSet {
+			audioItems = tracks.compactMap { track in
+				return AudioItem(
+					highQualitySoundURL: nil,
+					mediumQualitySoundURL: track?.audioFile?.mp3_v0,
+					lowQualitySoundURL: track?.audioFile?.mp3_128
+				)
+			}
+		}
+	}
+
+	var audioItems: [AudioItem] = []
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -37,6 +47,11 @@ class MainViewController: NSViewController, NSTableViewDelegate, NSTableViewData
 		tableView.delegate = self
 		tableView.dataSource = self
 		tableView.doubleAction = #selector(playTrack)
+
+		audioPlayer.delegate = self
+
+		playheadSlider.doubleValue = 0
+		playheadSlider.action = #selector(skipToTimestamp)
 
 		getDataBlob()
 	}
@@ -48,32 +63,41 @@ class MainViewController: NSViewController, NSTableViewDelegate, NSTableViewData
 	}
 
 	@objc func playTrack() {
-		guard let tracks = tracks else { return }
-		let track = tracks[tableView.clickedRow]
-		let audioItem = AudioItem(
-			highQualitySoundURL: nil,
-			mediumQualitySoundURL: track.audioFile?.mp3_v0,
-			lowQualitySoundURL: track.audioFile?.mp3_128
-		)
-
-		audioPlayer.play(item: audioItem!)
+		audioPlayer.play(items: audioItems, startAtIndex: tableView.clickedRow)
 	}
 
+	@objc func skipToTimestamp() {
+		audioPlayer.seek(to: playheadSlider.doubleValue)
+	}
+
+}
+
+// MARK: - AudioPlayerDelegate Methods
+extension MainViewController {
+
+	func audioPlayer(_ audioPlayer: AudioPlayer, didUpdateProgressionTo time: TimeInterval, percentageRead: Float) {
+		playheadSlider.doubleValue = Double(percentageRead)
+	}
+
+}
+
+// MARK: - TableViewDelegate Methods
+extension MainViewController {
+
 	func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
-		guard let tracks = tracks else { return nil }
 		let track = tracks[row]
 
 		switch tableColumn {
-		case trackNumberColumn: return "\(track.trackNumber ?? 0)"
-		case trackNameColumn:   return "\(track.title ?? "")"
+		case trackNumberColumn: return "\(track?.trackNumber ?? 0)"
+		case trackNameColumn:   return "\(track?.title ?? "")"
 		case artistColumn:      return "\(dataBlob?.artist ?? "")"
-		case durationColumn:    return track.duration!.toAudioString
+		case durationColumn:    return track?.duration!.toAudioString
 		default:                return ""
 		}
 	}
 
 	func numberOfRows(in tableView: NSTableView) -> Int {
-		return tracks?.count ?? 0
+		return tracks.count
 	}
 
 }
