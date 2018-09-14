@@ -6,7 +6,7 @@ struct Track: Decodable {
 	let albumPreorder: Bool?
 	let altLink: String?
 	let audioFile: AudioFile?
-	let duration: Double?
+	let duration: TimeInterval?
 	let encodingError: Bool?
 	let encodingPending: Bool?
 	let encodingsID: Int?

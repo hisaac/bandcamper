@@ -36,8 +36,6 @@ class BandcampService {
 				return nil
 		}
 
-		print(stringifiedJSON)
-
 		let decoder = JSONDecoder()
 		decoder.dateDecodingStrategy = .formatted(.bandcampDateFormatter)
 

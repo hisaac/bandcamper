@@ -11,10 +11,6 @@
 		4A21905E21430C8100DD11F5 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21905D21430C8100DD11F5 /* Option.swift */; };
 		4A3618192124D9D700489D1B /* Origin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3618182124D9D700489D1B /* Origin.swift */; };
 		4A36181B2124D9EB00489D1B /* Art.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A36181A2124D9EB00489D1B /* Art.swift */; };
-		4A49E0D92118E4E1002347F3 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D32118E4E1002347F3 /* .swiftlint.yml */; };
-		4A49E0DB2118E4E1002347F3 /* changelog.md in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D52118E4E1002347F3 /* changelog.md */; };
-		4A49E0DC2118E4E1002347F3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D62118E4E1002347F3 /* .gitignore */; };
-		4A49E0DD2118E4E1002347F3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4A49E0D72118E4E1002347F3 /* README.md */; };
 		4A5B96312124BC4E003699A8 /* BandcampService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5D521187BDB00D35FC2 /* BandcampService.swift */; };
 		4A5B96322124BC4E003699A8 /* DataBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA184DE2121C6CC00F05559 /* DataBlob.swift */; };
 		4A5B96332124BC4E003699A8 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4C1DDA211F9EAE0098FBD3 /* Track.swift */; };
@@ -24,6 +20,9 @@
 		4A5B96372124BC4E003699A8 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A96E5DC211F941900B864E7 /* Album.swift */; };
 		4A5B96382124BC4E003699A8 /* TralbumCollectInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEF5C8021245BA800D05EED /* TralbumCollectInfo.swift */; };
 		4A5B963A2124D239003699A8 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5B96392124D239003699A8 /* Package.swift */; };
+		4A68DCBD214C34C30071B2F2 /* AudioPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A68DCBC214C34C30071B2F2 /* AudioPlayer.framework */; };
+		4A68DCBE214C34C30071B2F2 /* AudioPlayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A68DCBC214C34C30071B2F2 /* AudioPlayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4A68DCC2214C35120071B2F2 /* AudioPlayer.framework.dSYM in [Carthage] Copy dSYMs */ = {isa = PBXBuildFile; fileRef = 4A68DCC1214C35110071B2F2 /* AudioPlayer.framework.dSYM */; };
 		4A6BD5B421187B0800D35FC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B321187B0800D35FC2 /* AppDelegate.swift */; };
 		4A6BD5B621187B0800D35FC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B521187B0800D35FC2 /* ViewController.swift */; };
 		4A6BD5B821187B0800D35FC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A6BD5B721187B0800D35FC2 /* Assets.xcassets */; };
@@ -32,20 +31,31 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		4A6BD5D421187BBB00D35FC2 /* Embed Frameworks */ = {
+		4A68DCBF214C34C30071B2F2 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				4A68DCBE214C34C30071B2F2 /* AudioPlayer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A68DCC0214C34FC0071B2F2 /* [Carthage] Copy dSYMs */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				4A68DCC2214C35120071B2F2 /* AudioPlayer.framework.dSYM in [Carthage] Copy dSYMs */,
+			);
+			name = "[Carthage] Copy dSYMs";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4A178A4F2118EFC2004ED71A /* Bandcamper.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Bandcamper.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4A21905B2143048700DD11F5 /* JSONNull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONNull.swift; sourceTree = "<group>"; };
 		4A21905D21430C8100DD11F5 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		4A3618182124D9D700489D1B /* Origin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Origin.swift; sourceTree = "<group>"; };
@@ -56,10 +66,14 @@
 		4A49E0D72118E4E1002347F3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4A49E0DF2118E5D3002347F3 /* dobie.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = dobie.html; sourceTree = "<group>"; };
 		4A49E0E02118E5D3002347F3 /* TralbumData.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = TralbumData.js; sourceTree = "<group>"; };
-		4A49E0E22118E61D002347F3 /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/Mac/SwiftSoup.framework; sourceTree = "<group>"; };
 		4A4C1DDA211F9EAE0098FBD3 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		4A5B96392124D239003699A8 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		4A5F94FA2124AC930018828E /* BandcampDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandcampDateFormatter.swift; sourceTree = "<group>"; };
+		4A68DCB5214C33A50071B2F2 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		4A68DCB6214C33A50071B2F2 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		4A68DCB7214C33D80071B2F2 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4A68DCBC214C34C30071B2F2 /* AudioPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioPlayer.framework; path = Carthage/Build/Mac/AudioPlayer.framework; sourceTree = "<group>"; };
+		4A68DCC1214C35110071B2F2 /* AudioPlayer.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = AudioPlayer.framework.dSYM; path = Carthage/Build/Mac/AudioPlayer.framework.dSYM; sourceTree = "<group>"; };
 		4A6BD5B021187B0700D35FC2 /* Bandcamper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bandcamper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A6BD5B321187B0800D35FC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A6BD5B521187B0800D35FC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A68DCBD214C34C30071B2F2 /* AudioPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +105,8 @@
 		4A49E0E12118E61C002347F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4A49E0E22118E61D002347F3 /* SwiftSoup.framework */,
+				4A68DCBC214C34C30071B2F2 /* AudioPlayer.framework */,
+				4A68DCC1214C35110071B2F2 /* AudioPlayer.framework.dSYM */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -100,10 +116,12 @@
 			children = (
 				4A49E0D72118E4E1002347F3 /* README.md */,
 				4A49E0D52118E4E1002347F3 /* changelog.md */,
-				4A178A4F2118EFC2004ED71A /* Bandcamper.playground */,
 				4A6BD5B221187B0700D35FC2 /* Bandcamper */,
 				4A6BD5B121187B0700D35FC2 /* Products */,
 				4A49E0E12118E61C002347F3 /* Frameworks */,
+				4A68DCB5214C33A50071B2F2 /* Cartfile */,
+				4A68DCB6214C33A50071B2F2 /* Cartfile.resolved */,
+				4A68DCB7214C33D80071B2F2 /* LICENSE */,
 				4A49E0D32118E4E1002347F3 /* .swiftlint.yml */,
 				4A49E0D62118E4E1002347F3 /* .gitignore */,
 			);
@@ -212,7 +230,9 @@
 				4A6BD5AC21187B0700D35FC2 /* Sources */,
 				4A6BD5AD21187B0700D35FC2 /* Frameworks */,
 				4A6BD5AE21187B0700D35FC2 /* Resources */,
-				4A6BD5D421187BBB00D35FC2 /* Embed Frameworks */,
+				4A68DCBF214C34C30071B2F2 /* Embed Frameworks */,
+				4A68DCC0214C34FC0071B2F2 /* [Carthage] Copy dSYMs */,
+				4A68DCC3214C35500071B2F2 /* [Carthage] Warn Outdated */,
 				4A49E0CF2118E491002347F3 /* Swiftlint */,
 			);
 			buildRules = (
@@ -267,11 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A49E0DC2118E4E1002347F3 /* .gitignore in Resources */,
-				4A49E0D92118E4E1002347F3 /* .swiftlint.yml in Resources */,
 				4A6BD5B821187B0800D35FC2 /* Assets.xcassets in Resources */,
-				4A49E0DB2118E4E1002347F3 /* changelog.md in Resources */,
-				4A49E0DD2118E4E1002347F3 /* README.md in Resources */,
 				4A6BD5BB21187B0800D35FC2 /* Main.storyboard in Resources */,
 				4ABA9AF22143032500EF5238 /* dataBlob.json in Resources */,
 			);
@@ -297,6 +313,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		4A68DCC3214C35500071B2F2 /* [Carthage] Warn Outdated */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Carthage] Warn Outdated";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage outdated --xcode-warnings\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -460,6 +494,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = F2J52QJQ9Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Bandcamper/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -479,6 +517,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = F2J52QJQ9Y;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Bandcamper/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
